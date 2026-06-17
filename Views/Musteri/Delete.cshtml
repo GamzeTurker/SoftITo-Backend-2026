@@ -1,0 +1,15 @@
+﻿@model SiparisSistemi.Models.Musteriler
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Silmek istiyor musunuz?</h3>
+
+<p>@Model.MusteriAdSoyad</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" value="@Model.MusteriId" />
+
+    <button type="submit" value="Delete" class="btn btn-danger">Sil</button>
+    <a asp-action="Index"  class="btn btn-secondary">Vazgeç</a>
+</form>

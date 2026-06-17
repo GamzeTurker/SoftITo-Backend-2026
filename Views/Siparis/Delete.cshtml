@@ -1,0 +1,76 @@
+﻿@model SiparisSistemi.Models.Siparisler
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+            <div class="card shadow border-danger">
+
+                <!-- HEADER -->
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Sipariş Silme Onayı</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="alert alert-warning">
+                        ⚠ Bu siparişi silmek üzeresiniz. Bu işlem geri alınamaz.
+                    </div>
+
+                    <!-- SİPARİŞ DETAY -->
+                    <ul class="list-group mb-3">
+
+                        <li class="list-group-item">
+                            <b>Müşteri:</b> @Model.musteriler.MusteriAdSoyad
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Ürün:</b> @Model.urunler.UrunAdi
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Adet:</b> @Model.Adet
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Tutar:</b> @Model.ToplamTutar ₺
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Tarih:</b> @Model.SiparisTarihi.ToString("dd.MM.yyyy")
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Durum:</b> @Model.SiparisDurumu
+                        </li>
+
+                    </ul>
+
+                    <!-- DELETE FORM -->
+                    <form asp-action="Delete" method="post">
+
+                        <input type="hidden" asp-for="SiparisId" />
+
+                        <button type="submit" class="btn btn-danger w-100 mb-2">
+                            Evet, Sil
+                        </button>
+
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            İptal Et
+                        </a>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
