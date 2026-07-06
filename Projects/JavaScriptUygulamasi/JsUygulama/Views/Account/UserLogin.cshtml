@@ -1,0 +1,37 @@
+@{
+    ViewData["Title"] = "Kullanıcı Girişi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row justify-content-center" style="margin-top: 50px;">
+    <div class="col-md-4">
+        <div class="card shadow-lg border-0">
+            <div class="card-header bg-success text-white text-center py-3">
+                <h4 class="mb-0">👤 Kullanıcı Giriş Paneli</h4>
+            </div>
+            <div class="card-body p-4">
+                @if (ViewBag.Error != null)
+                {
+                    <div class="alert alert-danger text-center" role="alert">
+                        @ViewBag.Error
+                    </div>
+                }
+
+                <form asp-action="UserLogin" method="post">
+                    <div class="mb-3">
+                        <label class="form-label" style="font-weight: 600;">Kullanıcı Adı</label>
+                        <input type="text" name="username" class="form-control" placeholder="Kullanıcı adınız..." required />
+                    </div>
+
+                    <div class="mb-4">
+                        <label class="form-label" style="font-weight: 600;">Şifre</label>
+                        <input type="password" name="password" class="form-control" placeholder="Şifreniz..." required />
+                    </div>
+
+                    <button type="submit" class="btn btn-success w-100 py-2">Giriş Yap</button>
+                    <a href="/Home/Index" class="btn btn-outline-secondary w-100 mt-2 py-2">Geri Dön</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

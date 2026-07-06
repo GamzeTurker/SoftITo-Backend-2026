@@ -1,0 +1,80 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddCustomer" data-bs-toggle="modal" data-bs-target="#cusModal">
+    Add Customer
+</button>
+<input type="text" id="searchBox" class="form-control m-2" placeholder="Search..." />
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+           
+                <th>Id</th>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>City</th>
+                <th>Address</th>
+                <th>Created Date</th>
+                <th>Operation</th>
+            </tr>
+    </thead>
+    <tbody class="text-center" id="table_data"></tbody>
+</table>
+
+<!-- MODAL -->
+<div class="modal fade" id="cusModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Customer</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <input type="hidden" id="cusId" />
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="cusName" />
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" id="cusPhone" />
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" class="form-control" id="cusEmail" />
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="cusCity" />
+                </div>
+                <div class="form-group">
+                    <label>Address</label>
+                    <textarea class="form-control" id="cusAddress"></textarea>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-primary" onclick="AddCustomer()" id="btnAdd">Save</button>
+                <button class="btn btn-warning" onclick="UpdateCustomer()" id="btnUpdate" style="display:none">Update</button>
+                <button class="btn btn-danger" id="btnConfirmDelete" onclick="ConfirmDelete()" style="display:none">
+                    Delete
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/Customer.js"></script>

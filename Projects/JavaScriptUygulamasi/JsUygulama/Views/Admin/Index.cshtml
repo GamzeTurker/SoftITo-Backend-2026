@@ -1,0 +1,47 @@
+﻿@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "Admin Panel";
+}
+
+<div class="container">
+
+    <h2 class="mb-4">Admin Dashboard</h2>
+
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Stores</h5>
+                    <p class="card-text">Mağaza işlemleri</p>
+                    <a asp-controller="Store" asp-action="Index" class="btn btn-light btn-sm">Git</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Customers</h5>
+                    <p class="card-text">Müşteri işlemleri</p>
+                    <a href="/Customer/Index" class="btn btn-light btn-sm">Git</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card text-white bg-danger mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Employees</h5>
+                    <p class="card-text">Çalışan işlemleri</p>
+                    <a href="/Employee/Index" class="btn btn-light btn-sm">Git</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+

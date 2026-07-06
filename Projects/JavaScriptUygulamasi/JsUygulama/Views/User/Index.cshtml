@@ -1,0 +1,82 @@
+﻿@{
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+    ViewData["Title"] = "User Panel";
+}
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddStore" data-bs-toggle="modal" data-bs-target="#storeModal">
+    Add Store
+</button>
+<input type="text" id="searchBox" class="form-control m-2" placeholder="Search..." />
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+
+            <th>Id</th>
+            <th>Store Name</th>
+            <th>City</th>
+            <th>Phone</th>
+            <th>Employee Capacity</th>
+            <th>Operation</th>
+
+        </tr>
+    </thead>
+
+    <tbody class="text-center" id="table_data"></tbody>
+</table>
+
+<!-- MODAL -->
+<div class="modal fade" id="storeModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Store</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <input type="hidden" id="storeId" />
+
+                <div class="form-group">
+                    <label>Store Name</label>
+                    <input type="text" class="form-control" id="storeName" />
+                </div>
+
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" id="storeCity" />
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" id="storePhone" />
+                </div>
+
+                <div class="form-group">
+                    <label>Employee Capacity</label>
+                    <input type="text" class="form-control" id="storeCapacity" />
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-primary" onclick="AddStore()" id="btnAdd">Save</button>
+
+                <button class="btn btn-warning" onclick="UpdateStore()" id="btnUpdate" style="display:none">
+                    Update
+                </button>
+
+                <button class="btn btn-danger" id="btnConfirmDelete" onclick="ConfirmDelete()" style="display:none">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/Store.js"></script>

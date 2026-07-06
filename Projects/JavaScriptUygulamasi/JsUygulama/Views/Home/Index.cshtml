@@ -1,0 +1,41 @@
+@{
+    ViewData["Title"] = "Ana Sayfa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center mb-4">
+    <h2>Hoş Geldiniz</h2>
+    <p>Devam etmek için giriş türünü seçin</p>
+</div>
+
+<div class="row justify-content-center">
+
+    <!-- ADMIN CARD -->
+    <div class="col-md-4">
+        <div class="card shadow-lg border-0">
+            <div class="card-body text-center">
+                <h3 class="text-primary">Admin</h3>
+                <p>Sistem yönetimi için giriş yapın</p>
+
+                <a asp-controller="Account" asp-action="AdminLogin" class="btn btn-primary w-100">
+                    Admin Giriş
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- USER CARD -->
+    <div class="col-md-4">
+        <div class="card shadow-lg border-0">
+            <div class="card-body text-center">
+                <h3 class="text-success">Kullanıcı</h3>
+                <p>Normal kullanıcı girişi</p>
+
+                <a asp-controller="Account" asp-action="UserLogin" class="btn btn-success w-100">
+                    Kullanıcı Giriş
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

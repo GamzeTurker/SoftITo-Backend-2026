@@ -1,0 +1,82 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<button class="btn btn-sm btn-primary m-2" id="btnAddEmployee" data-bs-toggle="modal" data-bs-target="#empModal">
+    Add Employee
+</button>
+<input type="text" id="searchBox" class="form-control m-2" placeholder="Search..." />
+<table class="table table-bordered">
+    <thead>
+        <tr class="text-center">
+
+            <th>Id</th>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Salary</th>
+            <th>Phone</th>
+            <th>Operation</th>
+
+        </tr>
+    </thead>
+
+    <tbody class="text-center" id="table_data"></tbody>
+</table>
+
+<!-- MODAL -->
+<div class="modal fade" id="empModal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h5 class="modal-title">Employee</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+
+                <input type="hidden" id="empId" />
+
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="empName" />
+                </div>
+
+                <div class="form-group">
+                    <label>Position</label>
+                    <input type="text" class="form-control" id="empPosition" />
+                </div>
+
+                <div class="form-group">
+                    <label>Salary</label>
+                    <input type="text" class="form-control" id="empSalary" />
+                </div>
+
+                <div class="form-group">
+                    <label>Phone</label>
+                    <input type="text" class="form-control" id="empPhone" />
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button class="btn btn-primary" onclick="AddEmployee()" id="btnAdd">Save</button>
+
+                <button class="btn btn-warning" onclick="UpdateEmployee()" id="btnUpdate" style="display:none">
+                    Update
+                </button>
+
+                <button class="btn btn-danger" id="btnConfirmDelete" onclick="ConfirmDelete()" style="display:none">
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/js/Employee.js"></script>
