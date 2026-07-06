@@ -1,0 +1,1146 @@
+2026-07-06 21:28:37.208 +03:00 [INF] User profile is available. Using 'C:\Users\gamze.turker\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-06 21:28:40.904 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-06 21:28:40.944 +03:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-06 21:28:41.003 +03:00 [INF] Executed DbCommand (45ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-06 21:28:41.653 +03:00 [INF] Executed DbCommand (72ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:28:42.305 +03:00 [INF] Now listening on: https://localhost:7086
+2026-07-06 21:28:42.305 +03:00 [INF] Now listening on: http://localhost:5118
+2026-07-06 21:28:42.390 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-06 21:28:42.391 +03:00 [INF] Hosting environment: Development
+2026-07-06 21:28:42.391 +03:00 [INF] Content root path: C:\Users\gamze.turker\source\repos\EduCore\EduCore
+2026-07-06 21:28:43.445 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/ - null null
+2026-07-06 21:28:43.749 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:28:43.768 +03:00 [INF] Route matched with {action = "SelectRole", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectRole() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:28:43.800 +03:00 [INF] Executing ViewResult, running view SelectRole.
+2026-07-06 21:28:44.042 +03:00 [INF] Executed ViewResult - view SelectRole executed in 246.9047ms.
+2026-07-06 21:28:44.049 +03:00 [INF] Executed action EduCore.Controllers.AccountController.SelectRole (EduCore) in 279.8676ms
+2026-07-06 21:28:44.050 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:28:44.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:28:44.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:28:44.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:28:44.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:28:44.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:28:44.053 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:28:44.058 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:28:44.084 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:28:44.114 +03:00 [INF] HTTP GET / responded 200 in 400.8776 ms
+2026-07-06 21:28:44.146 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.146 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.146 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.146 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.146 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.146 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.228 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 162.8032ms
+2026-07-06 21:28:44.231 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/ - 200 null text/html; charset=utf-8 791.2868ms
+2026-07-06 21:28:44.253 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:28:44.253 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.253 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:28:44.253 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:28:44.253 +03:00 [INF] HTTP GET /js/site.js responded 200 in 170.6073 ms
+2026-07-06 21:28:44.253 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.253 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.253 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 171.2104 ms
+2026-07-06 21:28:44.254 +03:00 [INF] HTTP GET /css/site.css responded 200 in 171.2464 ms
+2026-07-06 21:28:44.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 200.6026ms
+2026-07-06 21:28:44.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 200.7274ms
+2026-07-06 21:28:44.254 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 200.7034ms
+2026-07-06 21:28:44.279 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:28:44.280 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.280 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 197.3995 ms
+2026-07-06 21:28:44.280 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 226.9622ms
+2026-07-06 21:28:44.295 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 211.2879ms
+2026-07-06 21:28:44.311 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:28:44.312 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.312 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 229.3901 ms
+2026-07-06 21:28:44.312 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 258.8944ms
+2026-07-06 21:28:44.363 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:28:44.363 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:44.363 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 280.6119 ms
+2026-07-06 21:28:44.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 310.181ms
+2026-07-06 21:28:47.537 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Account/Login?role=Admin - null null
+2026-07-06 21:28:47.553 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:28:47.577 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:28:47.640 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:28:47.646 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:28:47.714 +03:00 [INF] Executing ViewResult, running view Login.
+2026-07-06 21:28:47.851 +03:00 [INF] Executed ViewResult - view Login executed in 139.0249ms.
+2026-07-06 21:28:47.852 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 274.7151ms
+2026-07-06 21:28:47.852 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:28:47.852 +03:00 [INF] HTTP GET /Account/Login responded 200 in 304.3211 ms
+2026-07-06 21:28:47.856 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Account/Login?role=Admin - 200 null text/html; charset=utf-8 319.257ms
+2026-07-06 21:28:47.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:28:47.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:28:47.868 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:28:47.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:28:47.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:28:47.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-07-06 21:28:47.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-07-06 21:28:47.869 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:28:47.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:28:47.871 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:28:47.871 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 1.0158ms
+2026-07-06 21:28:47.873 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.873 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.873 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.874 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:28:47.874 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.874 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 2.7027 ms
+2026-07-06 21:28:47.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 5.4532ms
+2026-07-06 21:28:47.874 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.874 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:28:47.874 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.874 +03:00 [INF] HTTP GET /js/site.js responded 200 in 3.3461 ms
+2026-07-06 21:28:47.874 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 5.1843ms
+2026-07-06 21:28:47.877 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:28:47.880 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.880 +03:00 [INF] HTTP GET /css/site.css responded 200 in 9.3389 ms
+2026-07-06 21:28:47.881 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 12.4306ms
+2026-07-06 21:28:47.881 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.887 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:28:47.887 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.887 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 15.6806 ms
+2026-07-06 21:28:47.887 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 19.2122ms
+2026-07-06 21:28:47.891 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.891 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.3358ms
+2026-07-06 21:28:47.924 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:28:47.924 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.924 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\jfvt5mrlge-{0}-4v8eqarkd7-4v8eqarkd7.gz'
+2026-07-06 21:28:47.924 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 53.0642 ms
+2026-07-06 21:28:47.924 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.924 +03:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 53.1013 ms
+2026-07-06 21:28:47.924 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 55.8267ms
+2026-07-06 21:28:47.924 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5857 text/javascript 55.2301ms
+2026-07-06 21:28:47.949 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.952 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:28:47.952 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.952 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 80.8760 ms
+2026-07-06 21:28:47.953 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 83.9628ms
+2026-07-06 21:28:47.981 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\sb46tgktqd-{0}-ag7o75518u-ag7o75518u.gz'
+2026-07-06 21:28:47.981 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:47.981 +03:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 109.7647 ms
+2026-07-06 21:28:47.981 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - 200 25341 text/javascript 111.9544ms
+2026-07-06 21:28:51.730 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/Account/Login?role=Admin - application/x-www-form-urlencoded 244
+2026-07-06 21:28:51.734 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:28:51.748 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EduCore.Models.ViewModels.LoginViewModel, System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:28:51.950 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-06 21:28:52.025 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName
+2026-07-06 21:28:52.094 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @p AND [a].[RoleId] = @p1
+2026-07-06 21:28:52.132 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-06 21:28:52.379 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-06 21:28:52.421 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-06 21:28:52.426 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:28:52.439 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @role_Id
+2026-07-06 21:28:52.452 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-06 21:28:52.459 +03:00 [INF] Executing RedirectResult, redirecting to /Admin.
+2026-07-06 21:28:52.459 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 711.327ms
+2026-07-06 21:28:52.460 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:28:52.460 +03:00 [INF] HTTP POST /Account/Login responded 302 in 727.1400 ms
+2026-07-06 21:28:52.460 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/Account/Login?role=Admin - 302 null null 730.0959ms
+2026-07-06 21:28:52.468 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Admin - null null
+2026-07-06 21:28:52.481 +03:00 [INF] Executing endpoint 'EduCore.Areas.Admin.Controllers.HomeController.Index (EduCore)'
+2026-07-06 21:28:52.482 +03:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EduCore.Areas.Admin.Controllers.HomeController (EduCore).
+2026-07-06 21:28:52.485 +03:00 [INF] Executing ViewResult, running view Index.
+2026-07-06 21:28:52.529 +03:00 [INF] Executed ViewResult - view Index executed in 45.9748ms.
+2026-07-06 21:28:52.530 +03:00 [INF] Executed action EduCore.Areas.Admin.Controllers.HomeController.Index (EduCore) in 47.1009ms
+2026-07-06 21:28:52.530 +03:00 [INF] Executed endpoint 'EduCore.Areas.Admin.Controllers.HomeController.Index (EduCore)'
+2026-07-06 21:28:52.530 +03:00 [INF] HTTP GET /Admin responded 200 in 50.0923 ms
+2026-07-06 21:28:52.530 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Admin - 200 null text/html; charset=utf-8 62.1189ms
+2026-07-06 21:28:52.546 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:28:52.547 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:28:52.547 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:28:52.549 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.549 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.549 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.550 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:28:52.550 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.550 +03:00 [INF] HTTP GET /css/site.css responded 200 in 1.3236 ms
+2026-07-06 21:28:52.550 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 3.2526ms
+2026-07-06 21:28:52.550 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:28:52.551 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.497ms
+2026-07-06 21:28:52.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:28:52.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:28:52.551 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:28:52.552 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:28:52.552 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.552 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 3.2002 ms
+2026-07-06 21:28:52.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 4.4739ms
+2026-07-06 21:28:52.560 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.560 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.561 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:28:52.561 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.561 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 12.3141 ms
+2026-07-06 21:28:52.561 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:28:52.561 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.561 +03:00 [INF] HTTP GET /js/site.js responded 200 in 1.7804 ms
+2026-07-06 21:28:52.561 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 9.6258ms
+2026-07-06 21:28:52.561 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 14.7729ms
+2026-07-06 21:28:52.562 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:28:52.562 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:28:52.562 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 2.7253 ms
+2026-07-06 21:28:52.562 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 10.6458ms
+2026-07-06 21:28:52.566 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 13.9474ms
+2026-07-06 21:29:03.730 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Admin/Course - null null
+2026-07-06 21:29:03.735 +03:00 [INF] Executing endpoint 'EduCore.Areas.Admin.Controllers.CourseController.Index (EduCore)'
+2026-07-06 21:29:03.742 +03:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Course"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index(System.String) on controller EduCore.Areas.Admin.Controllers.CourseController (EduCore).
+2026-07-06 21:29:03.749 +03:00 [INF] Kurs listeleme sayfası çağrıldı. Arama kelimesi: null
+2026-07-06 21:29:03.889 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title], [c0].[Id], [c0].[Description], [c0].[Name]
+FROM [Courses] AS [c]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+2026-07-06 21:29:03.977 +03:00 [INF] Executing ViewResult, running view Index.
+2026-07-06 21:29:04.044 +03:00 [INF] Executed ViewResult - view Index executed in 68.7771ms.
+2026-07-06 21:29:04.044 +03:00 [INF] Executed action EduCore.Areas.Admin.Controllers.CourseController.Index (EduCore) in 302.3707ms
+2026-07-06 21:29:04.044 +03:00 [INF] Executed endpoint 'EduCore.Areas.Admin.Controllers.CourseController.Index (EduCore)'
+2026-07-06 21:29:04.044 +03:00 [INF] HTTP GET /Admin/Course responded 200 in 309.4329 ms
+2026-07-06 21:29:04.045 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Admin/Course - 200 null text/html; charset=utf-8 315.523ms
+2026-07-06 21:29:04.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:04.055 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:04.056 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.056 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.058 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:04.058 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.058 +03:00 [INF] HTTP GET /css/site.css responded 200 in 2.3316 ms
+2026-07-06 21:29:04.059 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 3.5816ms
+2026-07-06 21:29:04.062 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:04.064 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:04.064 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:04.065 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:04.065 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:04.065 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.065 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.2591ms
+2026-07-06 21:29:04.065 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 9.1143 ms
+2026-07-06 21:29:04.065 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.065 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 10.3421ms
+2026-07-06 21:29:04.066 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:04.066 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.066 +03:00 [INF] HTTP GET /js/site.js responded 200 in 1.2854 ms
+2026-07-06 21:29:04.066 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:04.066 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 2.1473ms
+2026-07-06 21:29:04.066 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 2.9781 ms
+2026-07-06 21:29:04.066 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 4.2521ms
+2026-07-06 21:29:04.067 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:04.067 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:04.067 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 2.7561 ms
+2026-07-06 21:29:04.068 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 3.622ms
+2026-07-06 21:29:04.075 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:04.087 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 11.8558ms
+2026-07-06 21:29:13.282 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Admin/Course - null null
+2026-07-06 21:29:13.287 +03:00 [INF] Executing endpoint 'EduCore.Areas.Admin.Controllers.CourseController.Index (EduCore)'
+2026-07-06 21:29:13.287 +03:00 [INF] Route matched with {area = "Admin", action = "Index", controller = "Course"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index(System.String) on controller EduCore.Areas.Admin.Controllers.CourseController (EduCore).
+2026-07-06 21:29:13.288 +03:00 [INF] Kurs listeleme sayfası çağrıldı. Arama kelimesi: null
+2026-07-06 21:29:13.291 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title], [c0].[Id], [c0].[Description], [c0].[Name]
+FROM [Courses] AS [c]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+2026-07-06 21:29:13.292 +03:00 [INF] Executing ViewResult, running view Index.
+2026-07-06 21:29:13.295 +03:00 [INF] Executed ViewResult - view Index executed in 3.3369ms.
+2026-07-06 21:29:13.295 +03:00 [INF] Executed action EduCore.Areas.Admin.Controllers.CourseController.Index (EduCore) in 8.5469ms
+2026-07-06 21:29:13.295 +03:00 [INF] Executed endpoint 'EduCore.Areas.Admin.Controllers.CourseController.Index (EduCore)'
+2026-07-06 21:29:13.296 +03:00 [INF] HTTP GET /Admin/Course responded 200 in 10.4424 ms
+2026-07-06 21:29:13.296 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Admin/Course - 200 null text/html; charset=utf-8 13.5502ms
+2026-07-06 21:29:13.321 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:13.323 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:13.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:13.325 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:13.326 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.326 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.326 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.327 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:13.327 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:13.327 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.327 +03:00 [INF] HTTP GET /css/site.css responded 200 in 1.2446 ms
+2026-07-06 21:29:13.327 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:13.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 2.3389ms
+2026-07-06 21:29:13.328 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.328 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:13.328 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.328 +03:00 [INF] HTTP GET /js/site.js responded 200 in 0.7816 ms
+2026-07-06 21:29:13.328 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 1.5416ms
+2026-07-06 21:29:13.329 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:13.329 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.329 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 6.3155 ms
+2026-07-06 21:29:13.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 1.9422ms
+2026-07-06 21:29:13.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 7.475ms
+2026-07-06 21:29:13.329 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:13.329 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.329 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 3.1456 ms
+2026-07-06 21:29:13.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 4.7278ms
+2026-07-06 21:29:13.330 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:13.333 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:13.333 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:13.333 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 7.8743 ms
+2026-07-06 21:29:13.334 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 9.0347ms
+2026-07-06 21:29:13.359 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.5722ms
+2026-07-06 21:29:29.946 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/Account/LogOut - application/x-www-form-urlencoded 0
+2026-07-06 21:29:29.949 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.LogOut (EduCore)'
+2026-07-06 21:29:29.959 +03:00 [INF] Route matched with {action = "LogOut", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogOut() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:29.964 +03:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-07-06 21:29:29.964 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2026-07-06 21:29:29.964 +03:00 [INF] Executed action EduCore.Controllers.AccountController.LogOut (EduCore) in 4.5465ms
+2026-07-06 21:29:29.964 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.LogOut (EduCore)'
+2026-07-06 21:29:29.964 +03:00 [INF] HTTP POST /Account/LogOut responded 302 in 14.8840 ms
+2026-07-06 21:29:29.964 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/Account/LogOut - 302 null null 18.2913ms
+2026-07-06 21:29:29.973 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/ - null null
+2026-07-06 21:29:29.975 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:29:29.975 +03:00 [INF] Route matched with {action = "SelectRole", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectRole() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:29.975 +03:00 [INF] Executing ViewResult, running view SelectRole.
+2026-07-06 21:29:29.977 +03:00 [INF] Executed ViewResult - view SelectRole executed in 1.5854ms.
+2026-07-06 21:29:29.977 +03:00 [INF] Executed action EduCore.Controllers.AccountController.SelectRole (EduCore) in 2.1701ms
+2026-07-06 21:29:29.977 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:29:29.977 +03:00 [INF] HTTP GET / responded 200 in 2.6226 ms
+2026-07-06 21:29:29.977 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/ - 200 null text/html; charset=utf-8 4.7772ms
+2026-07-06 21:29:29.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:29.992 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:29.993 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:29:29.993 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:29.993 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:29.994 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.994 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.994 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:29.994 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.805ms
+2026-07-06 21:29:29.994 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:29.994 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.995 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.995 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:29:29.995 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:29.996 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:29.996 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 2.4628 ms
+2026-07-06 21:29:29.996 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:30.000 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 7.3483ms
+2026-07-06 21:29:30.000 +03:00 [INF] HTTP GET /css/site.css responded 200 in 7.4604 ms
+2026-07-06 21:29:30.000 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:30.001 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:30.001 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 8.035ms
+2026-07-06 21:29:30.001 +03:00 [INF] HTTP GET /js/site.js responded 200 in 5.4870 ms
+2026-07-06 21:29:30.001 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 6.2193ms
+2026-07-06 21:29:30.002 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:30.002 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:30.002 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 7.9804 ms
+2026-07-06 21:29:30.002 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:30.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 8.962ms
+2026-07-06 21:29:30.002 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:30.002 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:30.002 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 7.9043 ms
+2026-07-06 21:29:30.002 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 8.1092ms
+2026-07-06 21:29:30.004 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:30.004 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:30.004 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 11.6452 ms
+2026-07-06 21:29:30.005 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 12.0759ms
+2026-07-06 21:29:30.008 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.5259ms
+2026-07-06 21:29:31.592 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Account/Login?role=Student - null null
+2026-07-06 21:29:31.596 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:29:31.596 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:31.599 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:29:31.601 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:29:31.601 +03:00 [INF] Executing ViewResult, running view Login.
+2026-07-06 21:29:31.606 +03:00 [INF] Executed ViewResult - view Login executed in 4.4012ms.
+2026-07-06 21:29:31.606 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 9.8979ms
+2026-07-06 21:29:31.606 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:29:31.606 +03:00 [INF] HTTP GET /Account/Login responded 200 in 10.6367 ms
+2026-07-06 21:29:31.606 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Account/Login?role=Student - 200 null text/html; charset=utf-8 13.8336ms
+2026-07-06 21:29:31.620 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:31.620 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:31.620 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:29:31.620 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:31.621 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.621 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.621 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.621 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:31.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:31.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-07-06 21:29:31.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-07-06 21:29:31.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:31.621 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.621 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.622 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:31.622 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.622 +03:00 [INF] HTTP GET /css/site.css responded 200 in 1.4016 ms
+2026-07-06 21:29:31.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 1.6967ms
+2026-07-06 21:29:31.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.7805ms
+2026-07-06 21:29:31.622 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:29:31.622 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.622 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 1.6412 ms
+2026-07-06 21:29:31.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 1.9055ms
+2026-07-06 21:29:31.627 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:31.627 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.627 +03:00 [INF] HTTP GET /js/site.js responded 200 in 5.5213 ms
+2026-07-06 21:29:31.627 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 5.6888ms
+2026-07-06 21:29:31.627 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:31.627 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:31.627 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.627 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 6.4175 ms
+2026-07-06 21:29:31.627 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 6.7068ms
+2026-07-06 21:29:31.628 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:31.628 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.628 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 6.7205 ms
+2026-07-06 21:29:31.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 6.9454ms
+2026-07-06 21:29:31.629 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:31.629 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.629 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 8.6234 ms
+2026-07-06 21:29:31.629 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 8.9296ms
+2026-07-06 21:29:31.632 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 4.8801ms
+2026-07-06 21:29:31.634 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.635 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.635 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\jfvt5mrlge-{0}-4v8eqarkd7-4v8eqarkd7.gz'
+2026-07-06 21:29:31.635 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.635 +03:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 13.9423 ms
+2026-07-06 21:29:31.635 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5857 text/javascript 14.1498ms
+2026-07-06 21:29:31.636 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\sb46tgktqd-{0}-ag7o75518u-ag7o75518u.gz'
+2026-07-06 21:29:31.636 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:31.636 +03:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 14.6781 ms
+2026-07-06 21:29:31.636 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - 200 25341 text/javascript 14.944ms
+2026-07-06 21:29:35.257 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/Account/Login?role=Student - application/x-www-form-urlencoded 240
+2026-07-06 21:29:35.259 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:29:35.259 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EduCore.Models.ViewModels.LoginViewModel, System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:35.265 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-06 21:29:35.267 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName
+2026-07-06 21:29:35.269 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @p AND [a].[RoleId] = @p1
+2026-07-06 21:29:35.271 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-06 21:29:35.369 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-06 21:29:35.373 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-06 21:29:35.374 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:29:35.376 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @role_Id
+2026-07-06 21:29:35.377 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-06 21:29:35.377 +03:00 [INF] Executing RedirectResult, redirecting to /User/Home/HomePage.
+2026-07-06 21:29:35.377 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 117.8441ms
+2026-07-06 21:29:35.377 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:29:35.377 +03:00 [INF] HTTP POST /Account/Login responded 302 in 118.1593 ms
+2026-07-06 21:29:35.377 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/Account/Login?role=Student - 302 null null 120.4107ms
+2026-07-06 21:29:35.385 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/User/Home/HomePage - null null
+2026-07-06 21:29:35.398 +03:00 [INF] Executing endpoint 'EduCore.Areas.User.Controllers.HomeController.HomePage (EduCore)'
+2026-07-06 21:29:35.401 +03:00 [INF] Route matched with {area = "User", action = "HomePage", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult HomePage(System.Nullable`1[System.Int32]) on controller EduCore.Areas.User.Controllers.HomeController (EduCore).
+2026-07-06 21:29:35.405 +03:00 [INF] Öğrenci ana sayfası (Dashboard) çağrıldı. Öğrenci Id: 5
+2026-07-06 21:29:35.464 +03:00 [INF] Executed DbCommand (35ms) [Parameters=[@studentId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CourseId], [e].[EnrolledAt], [e].[ProgressPercent], [e].[StudentId], [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title], [c0].[Id], [c0].[Description], [c0].[Name]
+FROM [Enrollments] AS [e]
+INNER JOIN [Courses] AS [c] ON [e].[CourseId] = [c].[Id]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+WHERE [e].[StudentId] = @studentId
+2026-07-06 21:29:35.517 +03:00 [INF] Executed DbCommand (12ms) [Parameters=[@studentId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CertificateImageUrl], [c].[CourseId], [c].[EnrollmentId], [c].[IssuedAt], [c].[UserId]
+FROM [Certificates] AS [c]
+INNER JOIN [Enrollments] AS [e] ON [c].[EnrollmentId] = [e].[Id]
+WHERE [e].[StudentId] = @studentId
+2026-07-06 21:29:35.549 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Categories] AS [c]
+2026-07-06 21:29:35.557 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title], [c0].[Id], [c0].[Description], [c0].[Name]
+FROM [Courses] AS [c]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+2026-07-06 21:29:35.559 +03:00 [INF] Executing ViewResult, running view HomePage.
+2026-07-06 21:29:35.601 +03:00 [INF] Executed ViewResult - view HomePage executed in 42.9652ms.
+2026-07-06 21:29:35.602 +03:00 [INF] Executed action EduCore.Areas.User.Controllers.HomeController.HomePage (EduCore) in 200.9467ms
+2026-07-06 21:29:35.602 +03:00 [INF] Executed endpoint 'EduCore.Areas.User.Controllers.HomeController.HomePage (EduCore)'
+2026-07-06 21:29:35.602 +03:00 [INF] HTTP GET /User/Home/HomePage responded 200 in 213.8542 ms
+2026-07-06 21:29:35.602 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/User/Home/HomePage - 200 null text/html; charset=utf-8 216.9073ms
+2026-07-06 21:29:35.618 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:35.618 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:35.618 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:35.618 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:35.619 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.619 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.619 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.619 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.620 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:35.620 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.620 +03:00 [INF] HTTP GET /css/site.css responded 200 in 2.0508 ms
+2026-07-06 21:29:35.620 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 2.9177ms
+2026-07-06 21:29:35.621 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:35.621 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.621 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 2.8367 ms
+2026-07-06 21:29:35.621 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 3.6693ms
+2026-07-06 21:29:35.621 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:35.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.2561ms
+2026-07-06 21:29:35.622 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:35.622 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.622 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 3.7370 ms
+2026-07-06 21:29:35.622 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 4.6137ms
+2026-07-06 21:29:35.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:35.623 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:35.624 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.624 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:35.624 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.624 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 5.7975 ms
+2026-07-06 21:29:35.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 6.6976ms
+2026-07-06 21:29:35.625 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:35.625 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:35.625 +03:00 [INF] HTTP GET /js/site.js responded 200 in 1.1548 ms
+2026-07-06 21:29:35.625 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 1.8969ms
+2026-07-06 21:29:35.633 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 10.1798ms
+2026-07-06 21:29:39.284 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/User/Certificate - null null
+2026-07-06 21:29:39.290 +03:00 [INF] Executing endpoint 'EduCore.Areas.User.Controllers.CertificateController.Index (EduCore)'
+2026-07-06 21:29:39.291 +03:00 [INF] Route matched with {area = "User", action = "Index", controller = "Certificate"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EduCore.Areas.User.Controllers.CertificateController (EduCore).
+2026-07-06 21:29:39.316 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@studentId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CertificateImageUrl], [c].[CourseId], [c].[EnrollmentId], [c].[IssuedAt], [c].[UserId], [e].[Id], [e].[CourseId], [e].[EnrolledAt], [e].[ProgressPercent], [e].[StudentId], [c0].[Id], [c0].[CategoryId], [c0].[CoverImageUrl], [c0].[CreatedAt], [c0].[Description], [c0].[Price], [c0].[Title]
+FROM [Certificates] AS [c]
+INNER JOIN [Enrollments] AS [e] ON [c].[EnrollmentId] = [e].[Id]
+INNER JOIN [Courses] AS [c0] ON [e].[CourseId] = [c0].[Id]
+WHERE [e].[StudentId] = @studentId
+2026-07-06 21:29:39.319 +03:00 [INF] Executing ViewResult, running view Index.
+2026-07-06 21:29:39.335 +03:00 [INF] Executed ViewResult - view Index executed in 16.6617ms.
+2026-07-06 21:29:39.335 +03:00 [INF] Executed action EduCore.Areas.User.Controllers.CertificateController.Index (EduCore) in 43.7172ms
+2026-07-06 21:29:39.335 +03:00 [INF] Executed endpoint 'EduCore.Areas.User.Controllers.CertificateController.Index (EduCore)'
+2026-07-06 21:29:39.335 +03:00 [INF] HTTP GET /User/Certificate responded 200 in 47.7574 ms
+2026-07-06 21:29:39.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/User/Certificate - 200 null text/html; charset=utf-8 51.1979ms
+2026-07-06 21:29:39.352 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:39.352 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/img/certificates/default-certificate.jpg - null null
+2026-07-06 21:29:39.352 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:39.352 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:39.353 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.353 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.353 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.355 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:39.355 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.355 +03:00 [INF] HTTP GET /img/certificates/default-certificate.jpg responded 404 in 1.4654 ms
+2026-07-06 21:29:39.355 +03:00 [INF] HTTP GET /css/site.css responded 200 in 1.5276 ms
+2026-07-06 21:29:39.355 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/img/certificates/default-certificate.jpg - 404 0 null 2.415ms
+2026-07-06 21:29:39.355 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 2.3867ms
+2026-07-06 21:29:39.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:39.365 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:39.366 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.366 +03:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7086/img/certificates/default-certificate.jpg, Response status code: 404
+2026-07-06 21:29:39.366 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:39.366 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:39.367 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.367 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 2.2259ms
+2026-07-06 21:29:39.368 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:39.368 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.368 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 14.6490 ms
+2026-07-06 21:29:39.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 15.5217ms
+2026-07-06 21:29:39.368 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:39.368 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.368 +03:00 [INF] HTTP GET /js/site.js responded 200 in 1.4003 ms
+2026-07-06 21:29:39.368 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 2.0174ms
+2026-07-06 21:29:39.369 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:39.370 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.370 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 3.7245 ms
+2026-07-06 21:29:39.370 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 4.5431ms
+2026-07-06 21:29:39.371 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:39.371 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:39.371 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 18.1600 ms
+2026-07-06 21:29:39.371 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 19.1235ms
+2026-07-06 21:29:39.374 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 7.514ms
+2026-07-06 21:29:43.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/User/Review - null null
+2026-07-06 21:29:43.853 +03:00 [INF] Executing endpoint 'EduCore.Areas.User.Controllers.ReviewController.Index (EduCore)'
+2026-07-06 21:29:43.855 +03:00 [INF] Route matched with {area = "User", action = "Index", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller EduCore.Areas.User.Controllers.ReviewController (EduCore).
+2026-07-06 21:29:43.882 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@studentId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [r].[Id], [r].[Comment], [r].[CourseId], [r].[CreatedAt], [r].[Rating], [r].[StudentId], [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title]
+FROM [Reviews] AS [r]
+INNER JOIN [Courses] AS [c] ON [r].[CourseId] = [c].[Id]
+WHERE [r].[StudentId] = @studentId
+2026-07-06 21:29:43.897 +03:00 [INF] Executing ViewResult, running view Index.
+2026-07-06 21:29:43.912 +03:00 [INF] Executed ViewResult - view Index executed in 15.3186ms.
+2026-07-06 21:29:43.912 +03:00 [INF] Executed action EduCore.Areas.User.Controllers.ReviewController.Index (EduCore) in 57.2277ms
+2026-07-06 21:29:43.912 +03:00 [INF] Executed endpoint 'EduCore.Areas.User.Controllers.ReviewController.Index (EduCore)'
+2026-07-06 21:29:43.912 +03:00 [INF] HTTP GET /User/Review responded 200 in 60.9052 ms
+2026-07-06 21:29:43.912 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/User/Review - 200 null text/html; charset=utf-8 63.3894ms
+2026-07-06 21:29:43.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:43.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:43.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:43.930 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.930 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:43.930 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:43.930 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:43.930 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.4342ms
+2026-07-06 21:29:43.931 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:43.931 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.931 +03:00 [INF] HTTP GET /css/site.css responded 200 in 0.9018 ms
+2026-07-06 21:29:43.931 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 1.6262ms
+2026-07-06 21:29:43.931 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.931 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.931 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:43.931 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.931 +03:00 [INF] HTTP GET /js/site.js responded 200 in 0.4957 ms
+2026-07-06 21:29:43.931 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 1.1282ms
+2026-07-06 21:29:43.932 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:43.932 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.932 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 2.3474 ms
+2026-07-06 21:29:43.932 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 2.8571ms
+2026-07-06 21:29:43.932 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:43.932 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.932 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 1.8209 ms
+2026-07-06 21:29:43.933 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 2.5155ms
+2026-07-06 21:29:43.934 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:43.934 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:43.934 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 4.4042 ms
+2026-07-06 21:29:43.934 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 5.2527ms
+2026-07-06 21:29:43.936 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:43.942 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.0006ms
+2026-07-06 21:29:47.899 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/Account/Logout - application/x-www-form-urlencoded 0
+2026-07-06 21:29:47.902 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.LogOut (EduCore)'
+2026-07-06 21:29:47.902 +03:00 [INF] Route matched with {action = "LogOut", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LogOut() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:47.903 +03:00 [INF] AuthenticationScheme: Identity.Application signed out.
+2026-07-06 21:29:47.903 +03:00 [INF] Executing RedirectResult, redirecting to /.
+2026-07-06 21:29:47.903 +03:00 [INF] Executed action EduCore.Controllers.AccountController.LogOut (EduCore) in 1.3831ms
+2026-07-06 21:29:47.903 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.LogOut (EduCore)'
+2026-07-06 21:29:47.903 +03:00 [INF] HTTP POST /Account/Logout responded 302 in 1.8014 ms
+2026-07-06 21:29:47.904 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/Account/Logout - 302 null null 4.9193ms
+2026-07-06 21:29:47.936 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/ - null null
+2026-07-06 21:29:47.938 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:29:47.938 +03:00 [INF] Route matched with {action = "SelectRole", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectRole() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:47.938 +03:00 [INF] Executing ViewResult, running view SelectRole.
+2026-07-06 21:29:47.941 +03:00 [INF] Executed ViewResult - view SelectRole executed in 2.2679ms.
+2026-07-06 21:29:47.941 +03:00 [INF] Executed action EduCore.Controllers.AccountController.SelectRole (EduCore) in 2.8647ms
+2026-07-06 21:29:47.941 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:29:47.941 +03:00 [INF] HTTP GET / responded 200 in 3.2727 ms
+2026-07-06 21:29:47.941 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/ - 200 null text/html; charset=utf-8 5.0967ms
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:47.956 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.956 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.956 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:47.956 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:47.957 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:47.957 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.957 +03:00 [INF] HTTP GET /css/site.css responded 200 in 0.7784 ms
+2026-07-06 21:29:47.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 0.9697ms
+2026-07-06 21:29:47.957 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.957 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.957 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.4198ms
+2026-07-06 21:29:47.957 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:29:47.957 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.957 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 1.1252 ms
+2026-07-06 21:29:47.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 1.3711ms
+2026-07-06 21:29:47.957 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:47.957 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.957 +03:00 [INF] HTTP GET /js/site.js responded 200 in 0.9874 ms
+2026-07-06 21:29:47.957 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 1.0963ms
+2026-07-06 21:29:47.958 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:47.959 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.959 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 2.0564 ms
+2026-07-06 21:29:47.959 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 2.2835ms
+2026-07-06 21:29:47.959 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:47.959 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.959 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 2.3792 ms
+2026-07-06 21:29:47.959 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 2.4995ms
+2026-07-06 21:29:47.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:47.960 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:47.960 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:47.960 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 4.6315 ms
+2026-07-06 21:29:47.961 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 4.9081ms
+2026-07-06 21:29:47.966 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.3443ms
+2026-07-06 21:29:54.897 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Account/Login?role=Admin - null null
+2026-07-06 21:29:54.900 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:29:54.901 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:54.906 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:29:54.908 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:29:54.909 +03:00 [INF] Executing ViewResult, running view Login.
+2026-07-06 21:29:54.913 +03:00 [INF] Executed ViewResult - view Login executed in 4.5095ms.
+2026-07-06 21:29:54.913 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 12.6472ms
+2026-07-06 21:29:54.913 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:29:54.913 +03:00 [INF] HTTP GET /Account/Login responded 200 in 13.1604 ms
+2026-07-06 21:29:54.914 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Account/Login?role=Admin - 200 null text/html; charset=utf-8 16.6871ms
+2026-07-06 21:29:54.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:54.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:29:54.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:54.926 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:54.926 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.926 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.926 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.926 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.927 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:29:54.927 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:54.927 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.927 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.927 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 0.9210 ms
+2026-07-06 21:29:54.927 +03:00 [INF] HTTP GET /css/site.css responded 200 in 0.8899 ms
+2026-07-06 21:29:54.927 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 1.1037ms
+2026-07-06 21:29:54.927 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 1.1221ms
+2026-07-06 21:29:54.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:54.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:54.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-07-06 21:29:54.927 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.927 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.927 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.928 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-07-06 21:29:54.928 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.928 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:54.928 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:54.928 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.928 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.928 +03:00 [INF] HTTP GET /js/site.js responded 200 in 0.6883 ms
+2026-07-06 21:29:54.928 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 1.7245 ms
+2026-07-06 21:29:54.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 0.813ms
+2026-07-06 21:29:54.928 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 2.0453ms
+2026-07-06 21:29:54.928 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\sb46tgktqd-{0}-ag7o75518u-ag7o75518u.gz'
+2026-07-06 21:29:54.929 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.929 +03:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 1.2911 ms
+2026-07-06 21:29:54.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - 200 25341 text/javascript 1.3741ms
+2026-07-06 21:29:54.929 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:54.929 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.929 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 1.4297 ms
+2026-07-06 21:29:54.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 1.5309ms
+2026-07-06 21:29:54.929 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\jfvt5mrlge-{0}-4v8eqarkd7-4v8eqarkd7.gz'
+2026-07-06 21:29:54.929 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.929 +03:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 1.1434 ms
+2026-07-06 21:29:54.929 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:54.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5857 text/javascript 1.2779ms
+2026-07-06 21:29:54.929 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.515ms
+2026-07-06 21:29:54.931 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:54.931 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:54.931 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 4.7560 ms
+2026-07-06 21:29:54.931 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 5.0032ms
+2026-07-06 21:29:54.931 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:54.938 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 6.2554ms
+2026-07-06 21:29:58.097 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/ - null null
+2026-07-06 21:29:58.099 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:29:58.099 +03:00 [INF] Route matched with {action = "SelectRole", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectRole() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:29:58.100 +03:00 [INF] Executing ViewResult, running view SelectRole.
+2026-07-06 21:29:58.101 +03:00 [INF] Executed ViewResult - view SelectRole executed in 0.967ms.
+2026-07-06 21:29:58.101 +03:00 [INF] Executed action EduCore.Controllers.AccountController.SelectRole (EduCore) in 1.4859ms
+2026-07-06 21:29:58.101 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:29:58.101 +03:00 [INF] HTTP GET / responded 200 in 1.7798 ms
+2026-07-06 21:29:58.101 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/ - 200 null text/html; charset=utf-8 3.7884ms
+2026-07-06 21:29:58.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:29:58.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:29:58.119 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.119 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:29:58.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:29:58.119 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:29:58.119 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.120 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.120 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.120 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:29:58.120 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.120 +03:00 [INF] HTTP GET /css/site.css responded 200 in 1.0674 ms
+2026-07-06 21:29:58.120 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 1.2693ms
+2026-07-06 21:29:58.120 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:29:58.120 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.120 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 1.0011 ms
+2026-07-06 21:29:58.120 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 1.093ms
+2026-07-06 21:29:58.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:29:58.121 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:29:58.121 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.121 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.2793ms
+2026-07-06 21:29:58.121 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:29:58.121 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.121 +03:00 [INF] HTTP GET /js/site.js responded 200 in 0.8064 ms
+2026-07-06 21:29:58.121 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 0.8769ms
+2026-07-06 21:29:58.121 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:29:58.122 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.122 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 2.1328 ms
+2026-07-06 21:29:58.122 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:29:58.122 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 2.2501ms
+2026-07-06 21:29:58.122 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.122 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 2.2803 ms
+2026-07-06 21:29:58.122 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 2.4415ms
+2026-07-06 21:29:58.123 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:29:58.123 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:29:58.124 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 4.4250 ms
+2026-07-06 21:29:58.124 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 4.6665ms
+2026-07-06 21:29:58.124 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:29:58.130 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 5.6717ms
+2026-07-06 21:41:03.240 +03:00 [INF] User profile is available. Using 'C:\Users\gamze.turker\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-06 21:41:06.713 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-06 21:41:06.756 +03:00 [INF] Executed DbCommand (23ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-06 21:41:06.803 +03:00 [INF] Executed DbCommand (29ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-06 21:41:07.527 +03:00 [INF] Executed DbCommand (84ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:41:08.229 +03:00 [INF] Now listening on: https://localhost:7086
+2026-07-06 21:41:08.229 +03:00 [INF] Now listening on: http://localhost:5118
+2026-07-06 21:41:08.303 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-06 21:41:08.303 +03:00 [INF] Hosting environment: Development
+2026-07-06 21:41:08.304 +03:00 [INF] Content root path: C:\Users\gamze.turker\source\repos\EduCore\EduCore
+2026-07-06 21:41:09.060 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/ - null null
+2026-07-06 21:41:09.329 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:41:09.351 +03:00 [INF] Route matched with {action = "SelectRole", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectRole() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:41:09.385 +03:00 [INF] Executing ViewResult, running view SelectRole.
+2026-07-06 21:41:09.599 +03:00 [INF] Executed ViewResult - view SelectRole executed in 216.1154ms.
+2026-07-06 21:41:09.603 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:41:09.603 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:41:09.603 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:41:09.603 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:41:09.628 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:41:09.655 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:41:09.663 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:41:09.669 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:41:09.697 +03:00 [INF] Executed action EduCore.Controllers.AccountController.SelectRole (EduCore) in 344.1772ms
+2026-07-06 21:41:09.708 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 21:41:09.723 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.723 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.723 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.723 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.723 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.723 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.737 +03:00 [INF] HTTP GET / responded 200 in 486.2301 ms
+2026-07-06 21:41:09.805 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 110.2622ms
+2026-07-06 21:41:09.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/ - 200 null text/html; charset=utf-8 766.5848ms
+2026-07-06 21:41:09.830 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:41:09.830 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:41:09.830 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.830 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.830 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:41:09.830 +03:00 [INF] HTTP GET /css/site.css responded 200 in 176.5441 ms
+2026-07-06 21:41:09.831 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.830 +03:00 [INF] HTTP GET /js/site.js responded 200 in 163.4188 ms
+2026-07-06 21:41:09.831 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 177.1219 ms
+2026-07-06 21:41:09.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 228.5914ms
+2026-07-06 21:41:09.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 228.7633ms
+2026-07-06 21:41:09.831 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 168.7293ms
+2026-07-06 21:41:09.836 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:41:09.836 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:41:09.839 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.839 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.839 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 185.1822 ms
+2026-07-06 21:41:09.839 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 185.3020 ms
+2026-07-06 21:41:09.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 211.4997ms
+2026-07-06 21:41:09.839 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 236.9617ms
+2026-07-06 21:41:09.845 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:41:09.845 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:09.845 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 191.5282 ms
+2026-07-06 21:41:09.845 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 243.1354ms
+2026-07-06 21:41:09.859 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 190.2144ms
+2026-07-06 21:41:11.876 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/Account/Login?role=Student - null null
+2026-07-06 21:41:11.900 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:41:11.935 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:41:12.057 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:41:12.065 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:41:12.144 +03:00 [INF] Executing ViewResult, running view Login.
+2026-07-06 21:41:12.294 +03:00 [INF] Executed ViewResult - view Login executed in 152.1975ms.
+2026-07-06 21:41:12.295 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 360.2195ms
+2026-07-06 21:41:12.295 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:41:12.295 +03:00 [INF] HTTP GET /Account/Login responded 200 in 402.8614 ms
+2026-07-06 21:41:12.301 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/Account/Login?role=Student - 200 null text/html; charset=utf-8 425.0942ms
+2026-07-06 21:41:12.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:41:12.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:41:12.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:41:12.320 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-07-06 21:41:12.320 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:41:12.320 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:41:12.320 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:41:12.320 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-07-06 21:41:12.320 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:41:12.319 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 21:41:12.321 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 1.3695ms
+2026-07-06 21:41:12.324 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.325 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.325 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.325 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.325 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.325 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 21:41:12.326 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.326 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 2.6259 ms
+2026-07-06 21:41:12.326 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 6.2728ms
+2026-07-06 21:41:12.326 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:41:12.326 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:41:12.326 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.326 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.326 +03:00 [INF] HTTP GET /css/site.css responded 200 in 3.5193 ms
+2026-07-06 21:41:12.327 +03:00 [INF] HTTP GET /js/site.js responded 200 in 3.5268 ms
+2026-07-06 21:41:12.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 7.2847ms
+2026-07-06 21:41:12.327 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\jfvt5mrlge-{0}-4v8eqarkd7-4v8eqarkd7.gz'
+2026-07-06 21:41:12.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 7.0177ms
+2026-07-06 21:41:12.327 +03:00 [INF] Sending file. Request path: 'lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\sb46tgktqd-{0}-ag7o75518u-ag7o75518u.gz'
+2026-07-06 21:41:12.327 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.327 +03:00 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 4.1354 ms
+2026-07-06 21:41:12.327 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.327 +03:00 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 4.2403 ms
+2026-07-06 21:41:12.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5857 text/javascript 7.3967ms
+2026-07-06 21:41:12.327 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery-validation/dist/jquery.validate.min.js - 200 25341 text/javascript 7.5251ms
+2026-07-06 21:41:12.327 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.333 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:41:12.333 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.333 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 10.1825 ms
+2026-07-06 21:41:12.333 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 13.8517ms
+2026-07-06 21:41:12.341 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.366 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:41:12.367 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.367 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 43.7411 ms
+2026-07-06 21:41:12.367 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 47.3473ms
+2026-07-06 21:41:12.373 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 53.3417ms
+2026-07-06 21:41:12.390 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.393 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:41:12.394 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:12.394 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 70.6985 ms
+2026-07-06 21:41:12.394 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 74.3154ms
+2026-07-06 21:41:13.512 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7086/Account/Login?role=Student - application/x-www-form-urlencoded 240
+2026-07-06 21:41:13.517 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:41:13.537 +03:00 [INF] Route matched with {action = "Login", controller = "Account", area = ""}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(EduCore.Models.ViewModels.LoginViewModel, System.String) on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 21:41:13.758 +03:00 [INF] Executed DbCommand (21ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-07-06 21:41:13.858 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@normalizedRoleName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedRoleName
+2026-07-06 21:41:13.953 +03:00 [INF] Executed DbCommand (17ms) [Parameters=[@p='?' (DbType = Int32), @p1='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[UserId], [a].[RoleId]
+FROM [AspNetUserRoles] AS [a]
+WHERE [a].[UserId] = @p AND [a].[RoleId] = @p1
+2026-07-06 21:41:13.996 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[Name], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[ProfileImageUrl], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-07-06 21:41:14.208 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@user_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-07-06 21:41:14.261 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@userId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-07-06 21:41:14.266 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 21:41:14.283 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@role_Id='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @role_Id
+2026-07-06 21:41:14.299 +03:00 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-07-06 21:41:14.307 +03:00 [INF] Executing RedirectResult, redirecting to /User/Home/HomePage.
+2026-07-06 21:41:14.307 +03:00 [INF] Executed action EduCore.Controllers.AccountController.Login (EduCore) in 770.5562ms
+2026-07-06 21:41:14.308 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.Login (EduCore)'
+2026-07-06 21:41:14.308 +03:00 [INF] HTTP POST /Account/Login responded 302 in 792.5211 ms
+2026-07-06 21:41:14.308 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7086/Account/Login?role=Student - 302 null null 796.278ms
+2026-07-06 21:41:14.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/User/Home/HomePage - null null
+2026-07-06 21:41:14.340 +03:00 [INF] Executing endpoint 'EduCore.Areas.User.Controllers.HomeController.HomePage (EduCore)'
+2026-07-06 21:41:14.342 +03:00 [INF] Route matched with {area = "User", action = "HomePage", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult HomePage(System.Nullable`1[System.Int32]) on controller EduCore.Areas.User.Controllers.HomeController (EduCore).
+2026-07-06 21:41:15.041 +03:00 [INF] Öğrenci ana sayfası (Dashboard) çağrıldı. Öğrenci Id: 5
+2026-07-06 21:41:15.164 +03:00 [INF] Executed DbCommand (56ms) [Parameters=[@studentId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [e].[Id], [e].[CourseId], [e].[EnrolledAt], [e].[ProgressPercent], [e].[StudentId], [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title], [c0].[Id], [c0].[Description], [c0].[Name]
+FROM [Enrollments] AS [e]
+INNER JOIN [Courses] AS [c] ON [e].[CourseId] = [c].[Id]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+WHERE [e].[StudentId] = @studentId
+2026-07-06 21:41:15.286 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@studentId='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CertificateImageUrl], [c].[CourseId], [c].[EnrollmentId], [c].[IssuedAt], [c].[UserId]
+FROM [Certificates] AS [c]
+INNER JOIN [Enrollments] AS [e] ON [c].[EnrollmentId] = [e].[Id]
+WHERE [e].[StudentId] = @studentId
+2026-07-06 21:41:15.323 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[Description], [c].[Name]
+FROM [Categories] AS [c]
+2026-07-06 21:41:15.352 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[Id], [c].[CategoryId], [c].[CoverImageUrl], [c].[CreatedAt], [c].[Description], [c].[Price], [c].[Title], [c0].[Id], [c0].[Description], [c0].[Name]
+FROM [Courses] AS [c]
+INNER JOIN [Categories] AS [c0] ON [c].[CategoryId] = [c0].[Id]
+2026-07-06 21:41:15.443 +03:00 [INF] Executing ViewResult, running view HomePage.
+2026-07-06 21:41:15.531 +03:00 [INF] Executed ViewResult - view HomePage executed in 89.3075ms.
+2026-07-06 21:41:15.532 +03:00 [INF] Executed action EduCore.Areas.User.Controllers.HomeController.HomePage (EduCore) in 1189.351ms
+2026-07-06 21:41:15.532 +03:00 [INF] Executed endpoint 'EduCore.Areas.User.Controllers.HomeController.HomePage (EduCore)'
+2026-07-06 21:41:15.532 +03:00 [INF] HTTP GET /User/Home/HomePage responded 200 in 1203.5644 ms
+2026-07-06 21:41:15.533 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/User/Home/HomePage - 200 null text/html; charset=utf-8 1215.8781ms
+2026-07-06 21:41:15.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - null null
+2026-07-06 21:41:15.542 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 21:41:15.545 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.545 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.546 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-acj4ilo6yx-acj4ilo6yx.gz'
+2026-07-06 21:41:15.546 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.546 +03:00 [INF] HTTP GET /css/site.css responded 200 in 1.7131 ms
+2026-07-06 21:41:15.547 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/css/site.css?v=Fv86gWKZ_7TC06J_NtRC66O2Dw6rox867Mzxs7IZdcM - 200 3560 text/css 4.5083ms
+2026-07-06 21:41:15.551 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-46ein0sx1k-46ein0sx1k.gz'
+2026-07-06 21:41:15.551 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.551 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 6.6262 ms
+2026-07-06 21:41:15.552 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 9.445ms
+2026-07-06 21:41:15.552 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 21:41:15.552 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 21:41:15.555 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.555 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - null null
+2026-07-06 21:41:15.556 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 21:41:15.556 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 0.7276ms
+2026-07-06 21:41:15.557 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.558 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-xtxxf3hu2r-xtxxf3hu2r.gz'
+2026-07-06 21:41:15.558 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.558 +03:00 [INF] HTTP GET /js/site.js responded 200 in 1.0125 ms
+2026-07-06 21:41:15.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/js/site.js?v=hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo - 200 264 text/javascript 2.1888ms
+2026-07-06 21:41:15.558 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-493y06b0oq-493y06b0oq.gz'
+2026-07-06 21:41:15.558 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.558 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 2.9302 ms
+2026-07-06 21:41:15.558 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 5.7794ms
+2026-07-06 21:41:15.558 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\source\repos\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-o1o13a6vjx-o1o13a6vjx.gz'
+2026-07-06 21:41:15.559 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 21:41:15.559 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 3.4496 ms
+2026-07-06 21:41:15.559 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 7.1009ms
+2026-07-06 21:41:15.559 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7086/_vs/browserLink - null null
+2026-07-06 21:41:15.574 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7086/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.63ms
+2026-07-06 23:06:19.729 +03:00 [INF] User profile is available. Using 'C:\Users\gamze.turker\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-06 23:06:21.493 +03:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-07-06 23:06:21.529 +03:00 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-07-06 23:06:21.574 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-07-06 23:06:22.180 +03:00 [INF] Executed DbCommand (71ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-07-06 23:06:22.834 +03:00 [INF] Now listening on: https://localhost:7199
+2026-07-06 23:06:22.835 +03:00 [INF] Now listening on: http://localhost:5199
+2026-07-06 23:06:22.927 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-06 23:06:22.928 +03:00 [INF] Hosting environment: Development
+2026-07-06 23:06:22.928 +03:00 [INF] Content root path: C:\Users\gamze.turker\Desktop\EduCore\EduCore
+2026-07-06 23:06:23.411 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/ - null null
+2026-07-06 23:06:23.639 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:23.747 +03:00 [INF] Executing endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 23:06:23.766 +03:00 [INF] Route matched with {action = "SelectRole", controller = "Account", area = ""}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult SelectRole() on controller EduCore.Controllers.AccountController (EduCore).
+2026-07-06 23:06:23.796 +03:00 [INF] Executing ViewResult, running view SelectRole.
+2026-07-06 23:06:24.002 +03:00 [INF] Executed ViewResult - view SelectRole executed in 210.4782ms.
+2026-07-06 23:06:24.009 +03:00 [INF] Executed action EduCore.Controllers.AccountController.SelectRole (EduCore) in 240.4544ms
+2026-07-06 23:06:24.011 +03:00 [INF] Executed endpoint 'EduCore.Controllers.AccountController.SelectRole (EduCore)'
+2026-07-06 23:06:24.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/_framework/aspnetcore-browser-refresh.js - null null
+2026-07-06 23:06:24.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-07-06 23:06:24.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/lib/jquery/dist/jquery.min.js - null null
+2026-07-06 23:06:24.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-07-06 23:06:24.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - null null
+2026-07-06 23:06:24.016 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/css/site.css?v=I7l5QznawvOgsFOFPmMyZMETHksvYIsYP8s-eeC423o - null null
+2026-07-06 23:06:24.042 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/js/site.js?v=FGv5EJ22ut1dLKHdTH_xegHb0lzWCdSj5n21sHVMXXI - null null
+2026-07-06 23:06:24.069 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/_vs/browserLink - null null
+2026-07-06 23:06:24.073 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.073 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.073 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.073 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.073 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.073 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.070 +03:00 [INF] HTTP GET / responded 200 in 372.0996 ms
+2026-07-06 23:06:24.126 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.126 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.126 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.126 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.126 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.127 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.164 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 140.2274ms
+2026-07-06 23:06:24.180 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/ - 200 null text/html; charset=utf-8 773.1962ms
+2026-07-06 23:06:24.240 +03:00 [INF] Sending file. Request path: 'js/site.js'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\364t4ofhia-{0}-g5dup5u0e7-g5dup5u0e7.gz'
+2026-07-06 23:06:24.240 +03:00 [INF] Sending file. Request path: 'css/site.css'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\v6qbdtznly-{0}-5u2u5uw6a8-5u2u5uw6a8.gz'
+2026-07-06 23:06:24.240 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.240 +03:00 [INF] Sending file. Request path: 'EduCore.styles.css'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\ovufm7wwc1-{0}-bj7u5eytwz-bj7u5eytwz.gz'
+2026-07-06 23:06:24.240 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.240 +03:00 [INF] HTTP GET /js/site.js responded 200 in 166.0263 ms
+2026-07-06 23:06:24.240 +03:00 [INF] HTTP GET /css/site.css responded 200 in 166.1050 ms
+2026-07-06 23:06:24.240 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.240 +03:00 [INF] HTTP GET /EduCore.styles.css responded 200 in 161.9248 ms
+2026-07-06 23:06:24.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/js/site.js?v=FGv5EJ22ut1dLKHdTH_xegHb0lzWCdSj5n21sHVMXXI - 200 264 text/javascript 198.8018ms
+2026-07-06 23:06:24.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/css/site.css?v=I7l5QznawvOgsFOFPmMyZMETHksvYIsYP8s-eeC423o - 200 2746 text/css 224.9845ms
+2026-07-06 23:06:24.240 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/EduCore.styles.css?v=WQHcUiH_HTSHMLZXp-Ii1nKf2zOuWQbYdMxaBZDLLoY - 200 3383 text/css 225.0126ms
+2026-07-06 23:06:24.247 +03:00 [INF] Sending file. Request path: 'lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\5t4e4hni9u-{0}-q3nu33gukd-q3nu33gukd.gz'
+2026-07-06 23:06:24.247 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\6elkt55pkr-{0}-18j4f80fn0-18j4f80fn0.gz'
+2026-07-06 23:06:24.249 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.249 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.249 +03:00 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 174.7672 ms
+2026-07-06 23:06:24.249 +03:00 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 173.0391 ms
+2026-07-06 23:06:24.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80764 text/javascript 233.6078ms
+2026-07-06 23:06:24.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/lib/jquery/dist/jquery.min.js - 200 87576 text/javascript 233.3077ms
+2026-07-06 23:06:24.253 +03:00 [INF] Sending file. Request path: 'lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\hj2epmido9-{0}-hocmxhqb8f-hocmxhqb8f.gz'
+2026-07-06 23:06:24.253 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.253 +03:00 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 178.8376 ms
+2026-07-06 23:06:24.253 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/lib/bootstrap/dist/css/bootstrap.min.css - 200 232871 text/css 237.7374ms
+2026-07-06 23:06:24.276 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/_vs/browserLink - 200 null text/javascript; charset=UTF-8 207.8005ms
+2026-07-06 23:06:24.321 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7199/favicon.ico - null null
+2026-07-06 23:06:24.327 +03:00 [INF] Identity.Application was not authenticated. Failure message: Unprotect ticket failed
+2026-07-06 23:06:24.332 +03:00 [INF] Executing endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.335 +03:00 [INF] Sending file. Request path: 'favicon.ico'. Physical path: 'C:\Users\gamze.turker\Desktop\EduCore\EduCore\obj\Debug\net10.0\compressed\it73wquvlp-{0}-xduyt28nsb-xduyt28nsb.gz'
+2026-07-06 23:06:24.336 +03:00 [INF] Executed endpoint 'Microsoft.AspNetCore.Routing.RouteEndpoint'
+2026-07-06 23:06:24.336 +03:00 [INF] HTTP GET /favicon.ico responded 200 in 8.2187 ms
+2026-07-06 23:06:24.336 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7199/favicon.ico - 200 5463 image/x-icon 15.1509ms

@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Giriş Paneli Seçimi";
+}
+
+<div class="container d-flex flex-column justify-content-center align-items-center" style="margin-top: 150px; margin-bottom: 80px;">
+    <div class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-dark mb-2">EduCore Portal Girişi</h1>
+        <p class="text-muted">Lütfen devam etmek için hesabınızın rolünü seçin.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center w-100" style="max-width: 800px;">
+        <!-- Öğrenci Giriş Kartı -->
+        <div class="col-md-6">
+            <div class="card edu-card text-center p-5 border-0 shadow-sm rounded-4 h-100">
+                <div class="fs-1 text-primary mb-3"><i class="bi bi-mortarboard-fill"></i></div>
+                <h3 class="fw-bold mb-2">Öğrenci Girişi</h3>
+                <p class="text-muted small mb-4">Eğitimlerinize erişmek, sertifikalarınızı görmek ve öğrenmeye devam etmek için.</p>
+                <a asp-action="Login" asp-route-role="Student" class="btn btn-premium w-100 py-2.5 rounded-pill">
+                    Öğrenci Paneline Git
+                </a>
+            </div>
+        </div>
+
+        <!-- Yönetici Giriş Kartı -->
+        <div class="col-md-6">
+            <div class="card edu-card text-center p-5 border-0 shadow-sm rounded-4 h-100">
+                <div class="fs-1 text-info mb-3"><i class="bi bi-shield-lock-fill"></i></div>
+                <h3 class="fw-bold mb-2">Yönetici Girişi</h3>
+                <p class="text-muted small mb-4">Kursları yönetmek, ders eklemek ve genel akademi ayarlarını yapmak için.</p>
+                <a asp-action="Login" asp-route-role="Admin" class="btn btn-outline-premium w-100 py-2.5 rounded-pill">
+                    Yönetici Paneline Git
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="EduCore.Data/EduCore.Data.csproj" Id="c7d2b93c-80d7-4edf-af66-ac7bc0b72552" />
+  <Project Path="EduCore.Models/EduCore.Models.csproj" Id="6c3e9001-9fef-4cb9-819a-380e5cb639a1" />
+  <Project Path="EduCore/EduCore.csproj" />
+</Solution>

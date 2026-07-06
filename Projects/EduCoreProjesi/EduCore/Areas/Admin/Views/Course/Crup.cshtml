@@ -1,0 +1,93 @@
+﻿@model EduCore.Models.ViewModels.CourseVM
+
+@{
+    var isEdit = Model.Course.Id > 0;
+    ViewData["Title"] = isEdit ? "Kurs Düzenle" : "Yeni Kurs Ekle";
+}
+
+<div class="container" style="margin-top: 120px; margin-bottom: 60px;">
+
+    <!-- Üst Başlık -->
+    <div class="mb-4">
+        <span class="badge bg-soft text-primary px-3 py-2 rounded-pill mb-2 fw-semibold" style="background: rgba(79, 70, 229, 0.1);">
+            <i class="bi bi-shield-lock-fill"></i> Yönetici Paneli
+        </span>
+        <h1 class="display-6 fw-bold text-dark mb-0">@(isEdit ? "Kurs Düzenle" : "Yeni Kurs Ekle")</h1>
+        <p class="text-muted small">Eğitim programınızı buradan güncelleyebilir veya yeni bir eğitim tanımlayabilirsiniz.</p>
+    </div>
+
+    <!-- Form Kartı -->
+    <div class="card edu-card shadow-sm border-0 rounded-4 overflow-hidden p-4 p-md-5" style="max-width: 800px; background: #fff;">
+
+        <form asp-controller="Course" asp-action="Crup" method="post" enctype="multipart/form-data">
+
+            <input type="hidden" asp-for="Course.Id" />
+            <input type="hidden" asp-for="Course.CoverImageUrl" />
+            <input type="hidden" asp-for="Course.CreatedAt" />
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <!-- Kurs Başlığı -->
+            <div class="mb-4">
+                <label asp-for="Course.Title" class="form-label fw-bold text-secondary" style="font-size: 0.9rem;">KURS BAŞLIĞI</label>
+                <input asp-for="Course.Title" class="form-control px-3 py-2" placeholder="Örn: Sıfırdan C# Programlama" style="border-radius: 12px; border: 1px solid #cbd5e1;" />
+                <span asp-validation-for="Course.Title" class="text-danger small mt-1 d-block"></span>
+            </div>
+
+            <!-- Kurs Açıklaması -->
+            <div class="mb-4">
+                <label asp-for="Course.Description" class="form-label fw-bold text-secondary" style="font-size: 0.9rem;">AÇIKLAMA</label>
+                <textarea asp-for="Course.Description" rows="5" class="form-control px-3 py-2" placeholder="Kurs detaylarını yazın..." style="border-radius: 12px; border: 1px solid #cbd5e1; resize: none;"></textarea>
+                <span asp-validation-for="Course.Description" class="text-danger small mt-1 d-block"></span>
+            </div>
+
+            <div class="row">
+                <!-- Fiyat -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Course.Price" class="form-label fw-bold text-secondary" style="font-size: 0.9rem;">FİYAT (₺)</label>
+                    <input asp-for="Course.Price" type="number" step="0.01" class="form-control px-3 py-2" style="border-radius: 12px; border: 1px solid #cbd5e1;" />
+                    <span asp-validation-for="Course.Price" class="text-danger small mt-1 d-block"></span>
+                </div>
+
+                <!-- Kategori Dropdown -->
+                <div class="col-md-6 mb-4">
+                    <label asp-for="Course.CategoryId" class="form-label fw-bold text-secondary" style="font-size: 0.9rem;">KATEGORİ</label>
+                    <select asp-for="Course.CategoryId"
+                            asp-items="Model.CategoryList"
+                            class="form-select px-3 py-2"
+                            style="border-radius: 12px; border: 1px solid #cbd5e1; height: 42px;">
+                        <option value="">-- Kategori Seçiniz --</option>
+                    </select>
+                    <span asp-validation-for="Course.CategoryId" class="text-danger small mt-1 d-block"></span>
+                </div>
+            </div>
+
+            <!-- Kapak Görseli Yükleme -->
+            <div class="mb-4">
+                <label class="form-label fw-bold text-secondary" style="font-size: 0.9rem;">KAPAK GÖRSELİ</label>
+
+                @if (isEdit && !string.IsNullOrEmpty(Model.Course.CoverImageUrl))
+                {
+                    <div class="mb-3">
+                        <img src="@Model.Course.CoverImageUrl" alt="Kapak Görseli" class="rounded-3 shadow-sm border" style="width: 150px; height: 100px; object-fit: cover;" />
+                    </div>
+                }
+
+                <input type="file" name="file" class="form-control px-3 py-2" style="border-radius: 12px; border: 1px solid #cbd5e1;" />
+            </div>
+
+            <!-- Butonlar -->
+            <div class="d-flex justify-content-start gap-3 mt-4 pt-3 border-top">
+                <button type="submit" class="btn btn-premium shadow-sm px-5 py-2">
+                    <i class="bi bi-save-fill me-1"></i> Kaydet
+                </button>
+                <a asp-controller="Course" asp-action="Index" class="btn btn-outline-secondary d-inline-flex align-items-center gap-1" style="border-radius: 20px; font-size: 0.9rem; padding: 8px 24px; border-color: #cbd5e1;">
+                    Vazgeç
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>

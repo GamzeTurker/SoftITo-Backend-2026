@@ -1,0 +1,66 @@
+﻿@model IEnumerable<EduCore.Models.Lesson>
+
+@{
+    ViewData["Title"] = ViewBag.CourseTitle + " Dersleri";
+}
+
+<div class="container" style="margin-top: 120px; margin-bottom: 60px;">
+
+    <!-- Üst Başlık ve Geri Dön Butonu -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-5">
+        <div>
+            <span class="badge bg-soft text-primary px-3 py-2 rounded-pill mb-2 fw-semibold" style="background: rgba(79, 70, 229, 0.1);">
+                <i class="bi bi-mortarboard-fill"></i> Kurs Detayı
+            </span>
+            <h1 class="display-6 fw-bold text-dark mb-0">@ViewBag.CourseTitle</h1>
+            <p class="text-muted small mb-0">Kategori: <strong class="text-primary">@ViewBag.CourseCategory</strong> | Kurs içindeki derslerin müfredatı aşağıda yer almaktadır.</p>
+        </div>
+        <div>
+            <!-- Kategori detayına geri dönmek için -->
+            <a asp-controller="Category" asp-action="Details" asp-route-id="@ViewBag.CategoryId" class="btn btn-outline-secondary d-inline-flex align-items-center gap-1" style="border-radius: 20px; font-size: 0.9rem; padding: 8px 24px; border-color: #cbd5e1;">
+                <i class="bi bi-arrow-left"></i> Kategoriye Geri Dön
+            </a>
+        </div>
+    </div>
+
+    <!-- Dersler Müfredat Listesi -->
+    <div class="card edu-card shadow-sm border-0 rounded-4 p-4 p-md-5" style="background: #fff;">
+        <h4 class="fw-bold text-dark mb-4"><i class="bi bi-list-ol text-primary me-2"></i> Kurs Müfredatı</h4>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="list-group list-group-flush">
+                @foreach (var item in Model)
+                {
+                    <div class="list-group-item px-0 py-3 border-0 border-bottom d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-2">
+                        <div class="d-flex align-items-center">
+                            <span class="badge bg-soft text-primary rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 35px; height: 35px; background: rgba(79, 70, 229, 0.08);">
+                                @item.SortOrder
+                            </span>
+                            <div>
+                                <h6 class="fw-bold text-dark mb-0">@item.Title</h6>
+                                <small class="text-muted"><i class="bi bi-clock me-1"></i> @item.DurationMinutes dakika</small>
+                            </div>
+                        </div>
+                        <div>
+                            @if (!string.IsNullOrEmpty(item.VideoUrl))
+                            {
+                                <a asp-controller="Lesson" asp-action="Watch" asp-route-id="@item.Id" class="btn btn-sm btn-outline-primary d-inline-flex align-items-center gap-1" style="border-radius: 15px; font-size: 0.85rem; padding: 6px 16px;">
+                                    <i class="bi bi-play-circle-fill"></i> Dersi İzle
+                                </a>
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="text-center py-5 text-muted">
+                <i class="bi bi-play-circle-fill fs-2 text-secondary opacity-50 mb-3 d-block"></i>
+                <span class="fw-semibold">Bu kursa henüz bir ders eklenmemiş.</span>
+            </div>
+        }
+    </div>
+
+</div>

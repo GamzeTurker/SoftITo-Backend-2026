@@ -1,0 +1,24 @@
+## Ignore Visual Studio temporary files, build results, and user-specific settings
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build results
+[Bb]in/
+[Oo]bj/
+[Log]s/
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio cache directory
+.vs/
+.idea/
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+*.sqlite

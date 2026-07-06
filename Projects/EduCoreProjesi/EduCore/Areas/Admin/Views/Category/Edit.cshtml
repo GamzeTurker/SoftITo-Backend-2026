@@ -1,0 +1,56 @@
+﻿@model EduCore.Models.Category
+
+@{
+    ViewData["Title"] = "Kategoriyi Düzenle";
+}
+
+<div class="container d-flex justify-content-center align-items-center" style="margin-top: 130px; margin-bottom: 70px;">
+    <div class="card edu-card shadow-sm border-0 rounded-4 p-4 w-100" style="max-width: 600px;">
+        <div class="mb-4">
+            <span class="badge bg-soft text-warning px-3 py-2 rounded-pill mb-2 fw-semibold text-dark" style="background: rgba(245, 158, 11, 0.15);">
+                <i class="bi bi-pencil-fill"></i> Kategori İşlemleri
+            </span>
+            <h2 class="fw-bold text-dark mb-0">Kategoriyi Düzenle</h2>
+            <p class="text-muted small">Kategori adını veya açıklamasını güncelleyin.</p>
+        </div>
+
+        <form method="post">
+            <input asp-for="Id" type="hidden" />
+
+            <!-- Kategori Adı -->
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label fw-bold text-dark">Kategori Adı</label>
+                <div class="input-group">
+                    <span class="input-group-text bg-light border-end-0 rounded-start-3"><i class="bi bi-tag-fill text-muted"></i></span>
+                    <input asp-for="Name" class="form-control bg-light border-start-0 rounded-end-3 py-2" style="font-size: 0.95rem;" />
+                </div>
+                <span asp-validation-for="Name" class="text-danger small mt-1 d-block"></span>
+            </div>
+
+            <!-- Kategori Açıklaması -->
+            <div class="mb-4">
+                <label asp-for="Description" class="form-label fw-bold text-dark">Açıklama</label>
+                <textarea asp-for="Description" rows="4" class="form-control bg-light rounded-3 py-2" style="font-size: 0.95rem; resize: none;"></textarea>
+                <span asp-validation-for="Description" class="text-danger small mt-1 d-block"></span>
+            </div>
+
+            <!-- Butonlar -->
+            <div class="row pt-2 g-3">
+                <div class="col-sm-6 order-2 order-sm-1">
+                    <a asp-action="Index" class="btn btn-outline-premium w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-x-circle"></i> İptal Et
+                    </a>
+                </div>
+                <div class="col-sm-6 order-1 order-sm-2">
+                    <button type="submit" class="btn btn-premium w-100 py-2 d-flex align-items-center justify-content-center gap-2">
+                        <i class="bi bi-arrow-repeat"></i> Değişiklikleri Kaydet
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
