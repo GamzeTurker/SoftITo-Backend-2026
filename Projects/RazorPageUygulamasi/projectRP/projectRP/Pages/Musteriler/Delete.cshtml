@@ -1,0 +1,28 @@
+﻿@page
+@model projectRP.Pages.Musteriler.DeleteModel
+@{
+}
+<h2>Müşteri Sil</h2>
+
+<hr />
+
+@if (Model.musteriBilgi != null)
+{
+    <p><b>Ad Soyad:</b> @Model.musteriBilgi.AdSoyad</p>
+    <p><b>Eposta:</b> @Model.musteriBilgi.Eposta</p>
+    <p><b>Telefon:</b> @Model.musteriBilgi.Telefon</p>
+    <p><b>Şehir:</b> @Model.musteriBilgi.Sehir</p>
+    <p><b>Notlar:</b> @Model.musteriBilgi.Notlar</p>
+}
+
+<hr />
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.musteriBilgi.ID" />
+
+    <button type="submit" style="background:red;color:white;">
+        Sil
+    </button>
+
+    <a href="/Musteriler/Index">İptal</a>
+</form>

@@ -1,0 +1,28 @@
+﻿@page
+@model projectRP.Pages.Yoneticiler.DeleteModel
+@{
+}
+
+<h2>Yönetici Sil</h2>
+
+<hr />
+
+@if (Model.yoneticiBilgi != null)
+{
+    <p><b>Ad Soyad:</b> @Model.yoneticiBilgi.AdSoyad</p>
+    <p><b>Eposta:</b> @Model.yoneticiBilgi.Eposta</p>
+    <p><b>Telefon:</b> @Model.yoneticiBilgi.Telefon</p>
+
+}
+
+<hr />
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.yoneticiBilgi.ID" />
+
+    <button type="submit" style="background:red;color:white;">
+        Sil
+    </button>
+
+    <a href="/Yoneticiler/Index">İptal</a>
+</form>

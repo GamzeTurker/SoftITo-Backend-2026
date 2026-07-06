@@ -1,0 +1,45 @@
+﻿@page
+@model projectRP.Pages.Calisanlar.EditModel
+@{
+}
+<form method="Post">
+    <input type="hidden" name="id" value="@Model.calisanBilgi.ID" />
+    <div class="row mb-3">
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="AdSoyad" value="@Model.calisanBilgi.AdSoyad" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Departman</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Departman" value="@Model.calisanBilgi.Departman" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Pozisyon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Pozisyon" value="@Model.calisanBilgi.Pozisyon" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Maaş</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Maas" value="@Model.calisanBilgi.Maas" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Telefon" value="@Model.calisanBilgi.Telefon" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Calisanlar/Index" role="button">İptal</a>
+        </div>
+    </div>
+</form>

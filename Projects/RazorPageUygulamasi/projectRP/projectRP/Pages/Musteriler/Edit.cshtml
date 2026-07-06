@@ -1,0 +1,46 @@
+﻿@page
+@model projectRP.Pages.Musteriler.EditModel
+@{
+}
+
+<form method="Post">
+    <input type="hidden" name="id" value="@Model.musteriBilgi.ID" />
+    <div class="row mb-3">
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="AdSoyad" value="@Model.musteriBilgi.AdSoyad" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Eposta</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Eposta" value="@Model.musteriBilgi.Eposta" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Telefon" value="@Model.musteriBilgi.Telefon" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Şehir</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Sehir" value="@Model.musteriBilgi.Sehir" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Notlar</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Notlar" value="@Model.musteriBilgi.Notlar" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Musteriler/Index" role="button">İptal</a>
+        </div>
+    </div>
+</form>

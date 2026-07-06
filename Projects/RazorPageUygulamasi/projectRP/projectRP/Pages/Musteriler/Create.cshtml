@@ -1,0 +1,54 @@
+﻿@page
+@model projectRP.Pages.Musteriler.CreateModel
+@{
+}
+
+<br />
+<h2>Müşteri Ekleme Ekranı</h2>
+@if (Model.errorMessage.Length > 0)
+{
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>@Model.errorMessage</strong>
+        <button type="button" class="btn-close" data-bs-dismis="alert" aria-label="close"></button>
+    </div>
+}
+<form method="Post">
+    <div class="row mb-3">
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="AdSoyad" value="@Model.musteriBilgi.AdSoyad" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Eposta</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Eposta" value="@Model.musteriBilgi.Eposta" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Telefon" value="@Model.musteriBilgi.Telefon" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Sehir</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Sehir" value="@Model.musteriBilgi.Sehir" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Notlar</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Notlar" value="@Model.musteriBilgi.Notlar" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Musteriler/Index" role="button">İptal</a>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,36 @@
+﻿@page
+@model projectRP.Pages.Yoneticiler.EditModel
+@{
+}
+
+
+<form method="Post">
+    <input type="hidden" name="id" value="@Model.yoneticiBilgi.ID" />
+    <div class="row mb-3">
+        <label class="col-sm-3">Ad Soyad</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="AdSoyad" value="@Model.yoneticiBilgi.AdSoyad" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Eposta</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Eposta" value="@Model.yoneticiBilgi.Eposta" />
+        </div>
+    </div>
+    <div class="row mb-3">
+        <label class="col-sm-3">Telefon</label>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" name="Telefon" value="@Model.yoneticiBilgi.Telefon" />
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="offset-sm-3 col-sm-3 d-grid">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div class="col-sm-3 d-grid">
+            <a class="btn btn-outline-primary" href="/Yoneticiler/Index" role="button">İptal</a>
+        </div>
+    </div>
+</form>

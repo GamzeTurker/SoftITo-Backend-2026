@@ -1,0 +1,29 @@
+﻿@page
+@model projectRP.Pages.Calisanlar.DeleteModel
+@{
+}
+
+<h2>Çalışan Sil</h2>
+
+<hr />
+
+@if (Model.calisanBilgi != null)
+{
+    <p><b>Ad Soyad:</b> @Model.calisanBilgi.AdSoyad</p>
+    <p><b>Departman:</b> @Model.calisanBilgi.Departman</p>
+    <p><b>Pozisyon:</b> @Model.calisanBilgi.Pozisyon</p>
+    <p><b>Maaş:</b> @Model.calisanBilgi.Maas</p>
+    <p><b>Telefon:</b> @Model.calisanBilgi.Telefon</p>
+}
+
+<hr />
+
+<form method="post">
+    <input type="hidden" name="id" value="@Model.calisanBilgi.ID" />
+
+    <button type="submit" style="background:red;color:white;">
+        Sil
+    </button>
+
+    <a href="/Calisanlar/Index">İptal</a>
+</form>
