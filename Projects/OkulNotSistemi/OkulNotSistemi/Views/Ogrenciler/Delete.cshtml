@@ -1,0 +1,32 @@
+﻿@model OkulNotSistemi.Models.Ogrenciler
+
+@{
+    ViewData["Title"] = "Öğrenci Sil";
+}
+
+<h3 class="mb-4 text-danger">🗑 Öğrenci Silme İşlemi</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <p><b>Ad:</b> @Model.OgrenciAd</p>
+        <p><b>Soyad:</b> @Model.OgrenciSoyad</p>
+        <p><b>Numara:</b> @Model.Numara</p>
+        <p><b>Sınıf:</b> @Model.Sinif</p>
+
+        <form method="post">
+
+            <input type="hidden" name="OgrenciId" value="@Model.OgrenciId" />
+
+            <button type="submit" class="btn btn-danger">
+                🗑 Sil
+            </button>
+
+            <a href="/Ogrenciler/Index" class="btn btn-secondary">
+                İptal
+            </a>
+
+        </form>
+
+    </div>
+</div>

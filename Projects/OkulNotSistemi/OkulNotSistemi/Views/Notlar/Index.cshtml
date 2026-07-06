@@ -1,0 +1,133 @@
+﻿@model IEnumerable<OkulNotSistemi.Models.Notlar>
+
+@{
+    ViewData["Title"] = "Notlar";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <h3 class="text-gray-800">📊 Notlar Listesi</h3>
+
+    <a href="/Notlar/Create" class="btn btn-primary">
+        ➕ Yeni Not Ekle
+    </a>
+  
+</div>
+</div>
+<div class="mb-3">
+    <a asp-controller="Notlar" asp-action="ExportPdf" class="btn btn-danger">
+        <i class="fa fa-file-pdf"></i> PDF Olarak İndir
+    </a>
+    <!-- YENİ: Excel Butonumuz -->
+    <a asp-controller="Notlar" asp-action="ExportExcel" class="btn btn-success">
+        <i class="fa fa-file-excel"></i> Excel Olarak İndir
+    </a>
+</div>
+
+<!-- 🔍 ARAMA -->
+<input type="text" id="searchInput" class="form-control mb-3" placeholder="Ders ara...">
+
+<div class="card shadow mb-4">
+
+    <div class="card-body">
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover">
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Öğrenci</th>
+                        <th>Ders</th>
+                        <th>Vize</th>
+                        <th>Final</th>
+                        <th>Ortalama</th>
+                        <th>Durum</th>
+                        <th>İşlemler</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    @foreach (var item in Model)
+                    {
+                        decimal vize = item.Vize ?? 0;
+                        decimal final = item.Final ?? 0;
+                        decimal ort = (vize * 0.4m) + (final * 0.6m);
+
+                        <tr>
+
+                            <!-- Öğrenci -->
+                            @* <td>
+                                @item.Ogrenci.OgrenciId
+                            </td> *@
+                            <td>
+                                @item.Ogrenci.OgrenciAd @item.Ogrenci.OgrenciSoyad
+                            </td>
+
+                            <!-- Ders -->
+                            <td>
+                                @item.Ders.DersAd
+                            </td>
+
+                            <!-- Vize -->
+                            <td>
+                                <span class="badge badge-info">
+                                    @item.Vize
+                                </span>
+                            </td>
+
+                            <!-- Final -->
+                            <td>
+                                <span class="badge badge-warning">
+                                    @item.Final
+                                </span>
+                            </td>
+
+                            <!-- Ortalama -->
+                            <td>
+                                <span class="badge badge-success">
+                                    @ort.ToString("0.00")
+                                </span>
+                            </td>
+
+                            <!-- DURUM -->
+                            <td>
+                                @if (ort >= 50)
+                                {
+                                    <span class="badge badge-success">Geçti</span>
+                                }
+                                else
+                                {
+                                    <span class="badge badge-danger">Kaldı</span>
+                                }
+                            </td>
+
+                            <!-- İŞLEMLER -->
+                            <td>
+
+                                <a href="/Notlar/Edit/@item.NotId"
+                                   class="btn btn-sm btn-warning">
+                                    ✏ Edit
+                                </a>
+
+                                <a href="/Notlar/Delete/@item.NotId"
+                                   class="btn btn-sm btn-danger"
+                                   onclick="return confirm('Silmek istiyor musun?')">
+                                    🗑 Delete
+                                </a>
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</div>

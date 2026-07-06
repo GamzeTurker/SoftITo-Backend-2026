@@ -1,0 +1,27 @@
+﻿@model OkulNotSistemi.Models.Dersler
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 class="mb-4">➕ Yeni Ders Ekle</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <form asp-action="Create" method="post">
+
+            <!-- DERS AD -->
+            <div class="form-group">
+                <label>Ders Adı</label>
+                <input type="text" name="DersAd" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Kaydet
+            </button>
+
+        </form>
+
+    </div>
+</div>

@@ -1,0 +1,24 @@
+﻿@model IEnumerable<OkulNotSistemi.Models.Reports>
+
+<h3>📊 Sınıf Ortalama Raporu</h3>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Sınıf</th>
+            <th>Öğrenci Sayısı</th>
+            <th>Sınıf Ortalaması</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Sinif</td>
+                <td>@item.OgrenciSayisi</td>
+                <td>@item.SinifOrtalamasi.ToString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,67 @@
+﻿@model OkulNotSistemi.Models.Notlar
+
+@{
+    ViewData["Title"] = "Edit";
+
+}
+
+
+<h3 class="mb-4">✏ Not Düzenle</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <form method="post">
+
+            <input type="hidden" name="NotId" value="@Model.NotId" />
+
+            <!-- ÖĞRENCİ -->
+            <div class="form-group">
+                <label>Öğrenci</label>
+                <select name="OgrenciId" class="form-control">
+
+                    @foreach (var item in ViewBag.Ogrenciler)
+                    {
+                        <option value="@item.OgrenciId"
+                                selected="@(item.OgrenciId == Model.OgrenciId)">
+                            @item.OgrenciAd @item.OgrenciSoyad
+                        </option>
+                    }
+
+                </select>
+            </div>
+
+            <!-- DERS -->
+            <div class="form-group">
+                <label>Ders</label>
+                <select name="DersId" class="form-control">
+
+                    @foreach (var item in ViewBag.Dersler)
+                    {
+                        <option value="@item.DersId"
+                                selected="@(item.DersId == Model.DersId)">
+                            @item.DersAd
+                        </option>
+                    }
+
+                </select>
+            </div>
+
+            <!-- VİZE -->
+            <div class="form-group">
+                <label>Vize</label>
+                <input type="number" name="Vize" value="@Model.Vize" class="form-control" />
+            </div>
+
+            <!-- FİNAL -->
+            <div class="form-group">
+                <label>Final</label>
+                <input type="number" name="Final" value="@Model.Final" class="form-control" />
+            </div>
+
+            <button class="btn btn-success">Güncelle</button>
+
+        </form>
+
+    </div>
+</div>

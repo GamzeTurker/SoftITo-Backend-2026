@@ -1,0 +1,30 @@
+﻿@model IEnumerable<OkulNotSistemi.Models.Notlar>
+
+<h3>📊 Öğrenci Not Raporu</h3>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Öğrenci</th>
+            <th>Ders</th>
+            <th>Vize</th>
+            <th>Final</th>
+            <th>Ortalama</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            decimal ort = (item.Vize ?? 0) * 0.4m + (item.Final ?? 0) * 0.6m;
+
+            <tr>
+                <td>@item.Ogrenci.OgrenciAd @item.Ogrenci.OgrenciSoyad</td>
+                <td>@item.Ders.DersAd</td>
+                <td>@item.Vize</td>
+                <td>@item.Final</td>
+                <td>@ort.ToString("0.00")</td>
+            </tr>
+        }
+    </tbody>
+</table>

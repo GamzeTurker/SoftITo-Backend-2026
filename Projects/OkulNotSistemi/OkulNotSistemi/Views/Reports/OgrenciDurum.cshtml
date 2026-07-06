@@ -1,0 +1,45 @@
+﻿@model IEnumerable<OkulNotSistemi.Models.Reports>
+
+<h3 class="mb-4">📊 Öğrenci Durum Raporu</h3>
+
+<table class="table table-bordered table-hover">
+
+    <thead class="thead-dark">
+        <tr>
+            <th>Öğrenci</th>
+            <th>Ders</th>
+            <th>Vize</th>
+            <th>Final</th>
+            <th>Ortalama</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OgrenciAdSoyad</td>
+                <td>@item.DersAd</td>
+                <td>@item.Vize</td>
+                <td>@item.Final</td>
+
+                <td>
+                    @item.Ortalama.ToString()
+                </td>
+
+                <td>
+                    @if (item.Durum == "Geçti")
+                    {
+                        <span class="badge badge-success">Geçti</span>
+                    }
+                    else
+                    {
+                        <span class="badge badge-danger">Kaldı</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,29 @@
+﻿@model OkulNotSistemi.Models.Dersler
+
+@{
+    ViewData["Title"] = "Ders Sil";
+}
+
+<h3 class="mb-4 text-danger">🗑 Ders Silme İşlemi</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <p><b>Ders Adı:</b> @Model.DersAd</p>
+
+        <form method="post">
+
+            <input type="hidden" name="DersId" value="@Model.DersId" />
+
+            <button type="submit" class="btn btn-danger">
+                🗑 Sil
+            </button>
+
+            <a href="/Dersler/Index" class="btn btn-secondary">
+                İptal
+            </a>
+
+        </form>
+
+    </div>
+</div>

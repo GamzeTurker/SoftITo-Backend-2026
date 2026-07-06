@@ -1,0 +1,45 @@
+﻿@model OkulNotSistemi.Models.Ogrenciler
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h3 class="mb-4">➕ Yeni Öğrenci Ekle</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <form asp-action="Create" method="post">
+
+            <!-- AD -->
+            <div class="form-group">
+                <label>Ad</label>
+                <input type="text" name="OgrenciAd" class="form-control" />
+            </div>
+
+            <!-- SOYAD -->
+            <div class="form-group">
+                <label>Soyad</label>
+                <input type="text" name="OgrenciSoyad" class="form-control" />
+            </div>
+
+            <!-- NUMARA -->
+            <div class="form-group">
+                <label>Numara</label>
+                <input type="text" name="Numara" class="form-control" />
+            </div>
+
+            <!-- SINIF -->
+            <div class="form-group">
+                <label>Sınıf</label>
+                <input type="text" name="Sinif" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Kaydet
+            </button>
+
+        </form>
+
+    </div>
+</div>

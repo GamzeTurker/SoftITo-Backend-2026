@@ -1,0 +1,36 @@
+﻿@model IEnumerable<OkulNotSistemi.Models.Reports>
+
+<h3 class="mb-4">🏆 En Başarılı 5 Öğrenci</h3>
+
+<table class="table table-bordered table-hover">
+
+    <thead class="thead-dark">
+        <tr>
+            <th>Öğrenci</th>
+            <th>Sınıf</th>
+            <th>Ders</th>
+            <th>Vize</th>
+            <th>Final</th>
+            <th>Ortalama</th>
+            <th>Durum</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OgrenciAdSoyad</td>
+                <td>@item.Sinif</td>
+                <td>@item.DersAd</td>
+                <td>@item.Vize</td>
+                <td>@item.Final</td>
+                <td>@item.Ortalama.ToString()</td>
+                <td>
+                    <span class="badge badge-success">Başarılı</span>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -1,0 +1,68 @@
+﻿@model IEnumerable<OkulNotSistemi.Models.Notlar>
+
+@{
+    ViewData["Title"] = "Create";
+
+}
+
+<h3 class="mb-4">➕ Yeni Not Ekle</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <form asp-action="Create" method="post">
+
+            <!-- ÖĞRENCİ DROPDOWN -->
+            <div class="form-group">
+                <label>Öğrenci</label>
+                <select name="OgrenciId" class="form-control">
+
+                    <option value="">Seçiniz</option>
+
+                    @foreach (var item in ViewBag.Ogrenciler)
+                    {
+                        <option value="@item.OgrenciId">
+                            @item.OgrenciAd @item.OgrenciSoyad
+                        </option>
+                    }
+
+                </select>
+            </div>
+
+            <!-- DERS DROPDOWN -->
+            <div class="form-group">
+                <label>Ders</label>
+                <select name="DersId" class="form-control">
+
+                    <option value="">Seçiniz</option>
+
+                    @foreach (var item in ViewBag.Dersler)
+                    {
+                        <option value="@item.DersId">
+                            @item.DersAd
+                        </option>
+                    }
+
+                </select>
+            </div>
+
+            <!-- VİZE -->
+            <div class="form-group">
+                <label>Vize</label>
+                <input type="number" name="Vize" class="form-control" />
+            </div>
+
+            <!-- FİNAL -->
+            <div class="form-group">
+                <label>Final</label>
+                <input type="number" name="Final" class="form-control" />
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Kaydet
+            </button>
+
+        </form>
+
+    </div>
+</div>

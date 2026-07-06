@@ -1,0 +1,45 @@
+﻿@model OkulNotSistemi.Models.Ogrenciler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h3 class="mb-4">✏ Öğrenci Düzenle</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <form method="post">
+
+            <input type="hidden" name="OgrenciId" value="@Model.OgrenciId" />
+
+            <!-- AD -->
+            <div class="form-group">
+                <label>Ad</label>
+                <input type="text" name="OgrenciAd" value="@Model.OgrenciAd" class="form-control" />
+            </div>
+
+            <!-- SOYAD -->
+            <div class="form-group">
+                <label>Soyad</label>
+                <input type="text" name="OgrenciSoyad" value="@Model.OgrenciSoyad" class="form-control" />
+            </div>
+
+            <!-- NUMARA -->
+            <div class="form-group">
+                <label>Numara</label>
+                <input type="text" name="Numara" value="@Model.Numara" class="form-control" />
+            </div>
+
+            <!-- SINIF -->
+            <div class="form-group">
+                <label>Sınıf</label>
+                <input type="text" name="Sinif" value="@Model.Sinif" class="form-control" />
+            </div>
+
+            <button class="btn btn-success">Güncelle</button>
+
+        </form>
+
+    </div>
+</div>

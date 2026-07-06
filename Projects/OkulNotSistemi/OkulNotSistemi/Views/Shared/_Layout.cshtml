@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Okul Not Sistemi</title>
+
+    <link href="~/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <!-- SIDEBAR -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion">
+
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Home/Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Not Sistemi</div>
+            </a>
+
+            <hr class="sidebar-divider my-0">
+
+            <!-- DASHBOARD -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/Home/Index">
+                    <i class="fas fa-home"></i>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+
+            <hr class="sidebar-divider">
+
+            <!-- ÖĞRENCİLER -->
+            <li class="nav-item">
+                <a class="nav-link" asp-action="Index" asp-controller="Ogrenciler">
+                    <i class="fas fa-user-graduate"></i>
+                    <span>Öğrenciler</span>
+                </a>
+            </li>
+
+            <!-- DERSLER -->
+            <li class="nav-item">
+                <a class="nav-link" asp-action="Index" asp-controller="Dersler">
+                    <i class="fas fa-book"></i>
+                    <span>Dersler</span>
+                </a>
+            </li>
+
+            <!-- NOTLAR (DROPDOWN) -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#notlarMenu">
+                    <i class="fas fa-edit"></i>
+                    <span>Notlar</span>
+                </a>
+
+                <div id="notlarMenu" class="collapse">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" asp-controller="Notlar" asp-action="Index" >
+                            📋 Not Listesi
+                        </a>
+
+                        <a class="collapse-item" asp-controller="Notlar" asp-action="Create">
+                            ➕ Not Ekle
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+
+            <!-- RAPORLAR -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#raporMenu">
+                    <i class="fas fa-chart-bar"></i>
+                    <span>Raporlar</span>
+                </a>
+
+                <div id="raporMenu" class="collapse">
+                    <div class="bg-white py-2 collapse-inner rounded">
+
+                        <a class="collapse-item" href="/Reports/StudentGrades">
+                            Öğrenci Not Raporu
+                        </a>
+
+                      
+                        <a class="collapse-item" href="/Reports/EnBasarili5Ogrenci">
+                            EnBasarili5Ogrenci
+                        </a>
+
+                        <a class="collapse-item" href="/Reports/DersNotDagilim">
+                            Ders Not Dağılım Raporu
+                        </a>
+
+                        <a class="collapse-item" href="/Reports/SinifBasariAnaliz">
+                            Sınıf Başarı Analizi
+                        </a>
+
+                        <a class="collapse-item" href="/Reports/SinifOrtalama">
+                            Sınıf Ortalama Raporu
+                        </a>
+
+                        <a class="collapse-item" href="/Reports/OgrenciDurum">
+                            Öğrenci Durum Raporu
+                        </a>
+
+                    </div>
+                </div>
+            </li>
+
+            <hr class="sidebar-divider d-none d-md-block">
+
+        </ul>
+
+        <!-- CONTENT -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <div id="content">
+
+                <!-- TOP BAR -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
+
+                  
+
+                </nav>
+
+                <!-- SAYFA İÇERİĞİ -->
+                <div class="container-fluid">
+                    @RenderBody()
+                </div>
+
+            </div>
+
+            <!-- FOOTER -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto text-center">
+                    <span>Okul Not Sistemi © 2026</span>
+                </div>
+            </footer>
+
+        </div>
+
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="~/vendor/jquery/jquery.min.js"></script>
+    <script src="~/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="~/js/sb-admin-2.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+﻿@model OkulNotSistemi.Models.Notlar
+
+@{
+    ViewData["Title"] = "Not Sil";
+   
+}
+
+<h3 class="mb-4 text-danger">🗑 Not Silme İşlemi</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <p><b>Öğrenci:</b> @Model.Ogrenci.OgrenciAd @Model.Ogrenci.OgrenciSoyad</p>
+
+        <p><b>Ders:</b> @Model.Ders.DersAd</p>
+
+        <p><b>Vize:</b> @Model.Vize</p>
+
+        <p><b>Final:</b> @Model.Final</p>
+
+        <form method="post">
+
+            <input type="hidden" name="NotId" value="@Model.NotId" />
+
+            <button type="submit" class="btn btn-danger">
+                🗑 Sil
+            </button>
+
+            <a href="/Notlar/Index" class="btn btn-secondary">
+                İptal
+            </a>
+
+        </form>
+
+    </div>
+</div>

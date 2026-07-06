@@ -1,0 +1,27 @@
+﻿@model OkulNotSistemi.Models.Dersler
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h3 class="mb-4">✏ Ders Düzenle</h3>
+
+<div class="card shadow">
+    <div class="card-body">
+
+        <form method="post">
+
+            <input type="hidden" name="DersId" value="@Model.DersId" />
+
+            <!-- DERS AD -->
+            <div class="form-group">
+                <label>Ders Adı</label>
+                <input type="text" name="DersAd" value="@Model.DersAd" class="form-control" />
+            </div>
+
+            <button class="btn btn-success">Güncelle</button>
+
+        </form>
+
+    </div>
+</div>
