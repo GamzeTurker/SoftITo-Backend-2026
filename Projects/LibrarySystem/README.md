@@ -1,30 +1,35 @@
 📚 LibrarySystem - Library Management System
 
 📖 About
-LibrarySystem is a multi-layered ASP.NET Core application built with a Web API and an MVC web portal. All database operations are implemented using Dapper and ADO.NET, communicating exclusively with MS SQL Server using Stored Procedures.
+LibrarySystem is a comprehensive ASP.NET Core application structured with a Web API backend and an MVC frontend web portal. All database interactions are written in Dapper and ADO.NET using optimized Stored Procedures for high performance. 
 
-It allows administrators to manage authors, books, members, and book borrowing activities through a responsive Bootstrap dashboard interface. The project includes searching, statistics calculation, and dynamic data reporting with Excel and PDF export downloads.
+The application provides administrators with a responsive Bootstrap panel to manage authors, books, members, and active book borrowings. It includes search functionality across all modules and enables downloading clean reports in Excel (via EPPlus) and PDF (via iTextSharp) formats.
 
 🛠️ Technologies
 - ASP.NET Core MVC & Web API (.NET 10.0)
 - Dapper & ADO.NET (Stored Procedures)
 - MS SQL Server (LocalDB)
-- EPPlus (Excel Exporting)
-- iTextSharp (PDF Exporting)
+- EPPlus (Excel Report Support)
+- iTextSharp (PDF Report Support)
 - Bootstrap 5 & FontAwesome (UI)
 
 🚀 Features
-- **Admin Authentication:** Cookie-based secure login validating credentials via Web API.
-- **Relational Data Management:** CRUD support for Yazarlar, Kitaplar, Uyeler, and Emanetler.
-- **Excel & PDF Exports:** Clean tabular data export support for all major lists.
-- **Advanced Search:** Integrated search inputs to filter lists dynamically.
-- **Statistics Dashboard:** Counters and quick action widgets on the homepage.
+- **Secure Admin Panel:** Cookie-based authentication verifying admin credentials from the database via Web API.
+- **Relational Data Modeling:** Full CRUD operations for Yazarlar, Kitaplar, Uyeler, and Emanetler.
+- **Advanced Search Filters:** Dynamic search filters on list pages.
+- **Excel & PDF Exports:** Instant downloads of formatted tables for reporting.
+- **Home Dashboard:** High-level overview counters for total books, members, active borrowings, and a list of recent activities.
 
 📷 Screenshots
-### Giriş ve Kayıt Ekranları (Login & Sign Up)
-![Admin Giriş Paneli](images/login.png)
+### Giriş Paneli (Login Panel)
+![Admin Giriş Paneli](images/adminLogin.png)
 
-### Gösterge Panelleri ve Tablolar (Dashboards & Lists)
+### Gösterge Paneli (Dashboard Home)
 ![Gösterge Paneli](images/home.png)
-![Kitap Listesi](images/kitaplar.png)
-![Yazarlar Listesi](images/yazarlar.png)
+
+### Veri Giriş Formları (Data Entry Forms)
+![Yeni Kayıt Formu](images/create.png)
+![Düzenleme Formu](images/edit.png)
+
+### Kayıt Listeleri (Record Tables)
+![Yazarlar Listesi](images/writes.png)
