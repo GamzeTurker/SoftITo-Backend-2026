@@ -1,0 +1,43 @@
+@model CalisanSistemi.Model.RaporModel
+
+<h2 class="fw-bold mb-3">Bekleyen Görevler</h2>
+
+<div class="mb-3">
+    <a href="/Rapor/ExportBekleyenExcel" class="btn btn-success btn-sm"><i class="fa-solid fa-file-excel"></i> Excel İndir</a>
+    <a href="/Rapor/ExportBekleyenPdf" class="btn btn-danger btn-sm"><i class="fa-solid fa-file-pdf"></i> PDF İndir</a>
+</div>
+
+<div class="card shadow">
+
+    <div class="card-body p-0">
+
+        <table class="table table-hover mb-0">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>Görev Tipi</th>
+                    <th>Personel</th>
+                    <th>Durum</th>
+                    <th>Son Tarih</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model.GorevListesi)
+                {
+                    <tr>
+                        <td>@item.GorevTipi?.Ad</td>
+                        <td>@item.Personel?.PersonelAdSoyad</td>
+                        <td><span class="badge bg-warning text-dark">Bekliyor</span></td>
+                        <td>@item.SonTarih?.ToString("dd.MM.yyyy")</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

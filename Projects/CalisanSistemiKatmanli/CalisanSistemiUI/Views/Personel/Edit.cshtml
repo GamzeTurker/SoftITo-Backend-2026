@@ -1,0 +1,73 @@
+﻿@model CalisanSistemi.Model.Personel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2 class="fw-bold mb-3">Personel Düzenle</h2>
+
+<div class="card shadow">
+
+    <div class="card-body">
+
+        <form asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="PersonelNo" />
+
+            <!-- Ad Soyad -->
+            <div class="mb-3">
+                <label class="form-label">Ad Soyad</label>
+                <input asp-for="PersonelAdSoyad" class="form-control" />
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+
+            <!-- Yaş -->
+            <div class="mb-3">
+                <label class="form-label">Yaş</label>
+                <input asp-for="Yas" class="form-control" />
+            </div>
+
+            <!-- Meslek -->
+            <div class="mb-3">
+                <label class="form-label">Meslek</label>
+                <input asp-for="Meslek" class="form-control" />
+            </div>
+
+            <!-- Maaş -->
+            <div class="mb-3">
+                <label class="form-label">Maaş</label>
+                <input asp-for="Maas" class="form-control" />
+            </div>
+
+            <!-- Departman -->
+            <div class="mb-3">
+                <label class="form-label">Departman</label>
+
+                <select asp-for="DepartmanNo"
+                        class="form-select"
+                        asp-items="ViewBag.Departman">
+
+                    <option value="">Departman Seçiniz</option>
+
+                </select>
+            </div>
+
+            <!-- Butonlar -->
+            <button type="submit" class="btn btn-primary">
+                Güncelle
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Geri
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

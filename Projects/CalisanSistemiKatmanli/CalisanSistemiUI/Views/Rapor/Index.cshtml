@@ -1,0 +1,34 @@
+﻿@{
+    ViewData["Title"] = "Raporlar";
+}
+
+<h2 class="fw-bold mb-3">Rapor Seçimi</h2>
+
+<div class="card shadow">
+
+    <div class="card-body">
+
+        <form method="post">
+
+            <label class="form-label">Rapor Türü Seç</label>
+
+            <select name="rapor" class="form-select">
+
+                <option value="">Seçiniz</option>
+                <option value="Personel">Yas Raporu</option>
+                <option value="Departman">Departman Raporu</option>
+                <option value="Gorev">Tüm Görevler</option>
+                <option value="Tamamlanan">Tamamlanan Görevler</option>
+                <option value="Bekleyen">Bekleyen Görevler</option>
+
+            </select>
+
+            <button class="btn btn-primary mt-3">
+                Raporu Aç
+            </button>
+
+        </form>
+
+    </div>
+
+</div>

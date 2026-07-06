@@ -1,0 +1,37 @@
+﻿@model CalisanSistemi.Model.Personel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="fw-bold mb-3 text-danger">Personel Sil</h2>
+
+<div class="card shadow border-danger">
+
+    <div class="card-body">
+
+        <h5>Bu personeli silmek istediğinize emin misiniz?</h5>
+
+        <hr />
+
+        <p><strong>Ad Soyad:</strong> @Model.PersonelAdSoyad</p>
+        <p><strong>Email:</strong> @Model.Email</p>
+        <p><strong>Meslek:</strong> @Model.Meslek</p>
+
+        <form asp-action="Delete" method="post">
+
+            <input type="hidden" asp-for="PersonelNo" />
+
+            <button type="submit" class="btn btn-danger">
+                Sil
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                İptal
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

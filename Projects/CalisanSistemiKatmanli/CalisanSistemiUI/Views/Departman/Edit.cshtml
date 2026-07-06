@@ -1,0 +1,48 @@
+﻿@model CalisanSistemi.Model.Departman
+
+
+<h2 class="fw-bold mb-3">Departman Düzenle</h2>
+
+<div class="card shadow">
+
+    <div class="card-body">
+
+        <form asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="DepartmanNo" />
+
+            <!-- Departman Adi-->
+            <div class="mb-3">
+                <label class="form-label">Departman Adı</label>
+                <input asp-for="DepartmanAdi" class="form-control" />
+            </div>
+
+            <!-- CalisanSayisi -->
+            <div class="mb-3">
+                <label class="form-label">Çalışsan Sayısı</label>
+                <input asp-for="CalisanSayisi" class="form-control" />
+            </div>
+
+            <!-- aciklama -->
+            <div class="mb-3">
+                <label class="form-label">Açıklama</label>
+                <input asp-for="Aciklama" class="form-control" />
+            </div>
+
+          
+
+
+            <!-- Butonlar -->
+            <button type="submit" class="btn btn-primary">
+                Güncelle
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Geri
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

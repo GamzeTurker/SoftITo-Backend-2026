@@ -1,0 +1,80 @@
+﻿@model CalisanSistemi.Model.Gorev
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2 class="fw-bold mb-3 text-danger">Görev Sil</h2>
+
+<div class="card shadow">
+
+    <div class="card-body">
+
+        <div class="alert alert-warning">
+            Bu görevi silmek istediğinize emin misiniz?
+        </div>
+
+        <dl class="row">
+
+            <dt class="col-sm-3">
+                Görev Tipi
+            </dt>
+            <dd class="col-sm-9">
+                @Model.GorevTipi?.Ad
+            </dd>
+
+
+            <dt class="col-sm-3">
+                Personel
+            </dt>
+            <dd class="col-sm-9">
+                @Model.Personel?.PersonelAdSoyad
+            </dd>
+
+
+            <dt class="col-sm-3">
+                Durum
+            </dt>
+            <dd class="col-sm-9">
+                @if (Model.TamamlandiMi)
+                {
+                    <span class="badge bg-success">
+                        Tamamlandı
+                    </span>
+                }
+                else
+                {
+                    <span class="badge bg-warning text-dark">
+                        Devam Ediyor
+                    </span>
+                }
+            </dd>
+
+
+            <dt class="col-sm-3">
+                Son Tarih
+            </dt>
+            <dd class="col-sm-9">
+                @Model.SonTarih?.ToString("dd.MM.yyyy")
+            </dd>
+
+        </dl>
+
+
+        <form asp-action="Delete" method="post">
+
+            <input type="hidden" asp-for="GorevId" />
+
+            <button type="submit" class="btn btn-danger">
+                Sil
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Geri Dön
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

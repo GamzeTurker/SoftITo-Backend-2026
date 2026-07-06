@@ -1,0 +1,34 @@
+﻿@model CalisanSistemi.Model.Departman
+
+
+<h2 class="fw-bold mb-3 text-danger">Departman Sil</h2>
+
+<div class="card shadow border-danger">
+
+    <div class="card-body">
+
+        <h5>Bu personeli silmek istediğinize emin misiniz?</h5>
+
+        <hr />
+
+        <p><strong>Departman Adı:</strong> @Model.DepartmanAdi</p>
+        <p><strong>Çalışan Sayısı:</strong> @Model.CalisanSayisi</p>
+       
+
+        <form asp-action="Delete" method="post">
+
+            <input type="hidden" asp-for="DepartmanNo" />
+
+            <button type="submit" class="btn btn-danger">
+                Sil
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                İptal
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

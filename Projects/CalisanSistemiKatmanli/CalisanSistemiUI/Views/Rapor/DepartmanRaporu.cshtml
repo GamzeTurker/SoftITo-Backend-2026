@@ -1,0 +1,41 @@
+@model CalisanSistemi.Model.RaporModel
+
+<h2 class="fw-bold mb-3">Departman Raporu</h2>
+
+<div class="mb-3">
+    <a href="/Rapor/ExportDepartmanExcel" class="btn btn-success btn-sm"><i class="fa-solid fa-file-excel"></i> Excel İndir</a>
+    <a href="/Rapor/ExportDepartmanPdf" class="btn btn-danger btn-sm"><i class="fa-solid fa-file-pdf"></i> PDF İndir</a>
+</div>
+
+<div class="card shadow">
+
+    <div class="card-body p-0">
+
+        <table class="table table-hover mb-0">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>Departman Adı</th>
+                    <th>Açıklama</th>
+                    <th>Personel Sayısı</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model.DepartmanListesi)
+                {
+                    <tr>
+                        <td class="fw-semibold">@item.DepartmanAdi</td>
+                        <td>@item.Aciklama</td>
+                        <td><span class="badge bg-primary">@item.CalisanSayisi Kişi</span></td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

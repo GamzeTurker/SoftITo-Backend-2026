@@ -1,0 +1,49 @@
+﻿@model CalisanSistemi.Model.Departman
+
+
+
+<h2 class="fw-bold mb-3">Yeni Personel Oluştur</h2>
+
+<div class="card shadow">
+
+    <div class="card-body">
+
+        <form asp-action="Create" method="post">
+
+            <!-- Departman Adi -->
+            <div class="mb-3">
+                <label class="form-label">Departman Adı</label>
+                <input asp-for="DepartmanAdi" class="form-control" />
+                <span asp-validation-for="DepartmanAdi" class="text-danger"></span>
+            </div>
+
+            <!-- CalisanSayisi -->
+            <div class="mb-3">
+                <label class="form-label">Çalışan Sayısı</label>
+                <input asp-for="CalisanSayisi" class="form-control" />
+                <span asp-validation-for="CalisanSayisi" class="text-danger"></span>
+            </div>
+
+            <!-- Aciklama -->
+            <div class="mb-3">
+                <label class="form-label">Açıklama</label>
+                <input asp-for="Aciklama" class="form-control" />
+                <span asp-validation-for="Aciklama" class="text-danger"></span>
+            </div>
+
+     
+
+            <!-- Butonlar -->
+            <button type="submit" class="btn btn-success">
+                Kaydet
+            </button>
+
+            <a asp-action="Index" class="btn btn-secondary">
+                Geri
+            </a>
+
+        </form>
+
+    </div>
+
+</div>

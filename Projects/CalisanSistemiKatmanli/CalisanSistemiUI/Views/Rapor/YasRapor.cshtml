@@ -1,0 +1,45 @@
+@model CalisanSistemi.Model.RaporModel
+
+<h2 class="fw-bold mb-3">30 Yaş ve  Üstü Personeller</h2>
+
+<div class="mb-3">
+    <a href="/Rapor/ExportYasRaporExcel" class="btn btn-success btn-sm"><i class="fa-solid fa-file-excel"></i> Excel İndir</a>
+    <a href="/Rapor/ExportYasRaporPdf" class="btn btn-danger btn-sm"><i class="fa-solid fa-file-pdf"></i> PDF İndir</a>
+</div>
+
+<div class="card shadow">
+
+    <div class="card-body p-0">
+
+        <table class="table table-hover mb-0">
+
+            <thead class="table-dark">
+                <tr>
+                    <th>Ad Soyad</th>
+                    <th>Email</th>
+                    <th>Yaş</th>
+                    <th>Meslek</th>
+                    <th>Departman</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model.PersonelListesi)
+                {
+                    <tr>
+                        <td>@item.PersonelAdSoyad</td>
+                        <td>@item.Email</td>
+                        <td>@item.Yas</td>
+                        <td>@item.Meslek</td>
+                        <td>@item.Departman?.DepartmanAdi</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>

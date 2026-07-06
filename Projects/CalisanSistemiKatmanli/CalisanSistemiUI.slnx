@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="CalisanSistemi.Data/CalisanSistemi.Data.csproj" />
+  <Project Path="CalisanSistemi.Model/CalisanSistemi.Model.csproj" />
+  <Project Path="CalisanSistemiKatmanlı/CalisanSistemiUI.csproj" />
+</Solution>
