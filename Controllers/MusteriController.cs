@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure.Internal;
 using projectcodefirst.Models;
 using SiparisSistemi.Models;
@@ -13,10 +14,17 @@ namespace SiparisSistemi.Controllers
         {
             this.dbContext = dbContext;
         }
-        public IActionResult Index()
+        public IActionResult Index(string arama)
         {
-            var result = dbContext.Musterilers.ToList();
-            return View(result);
+            var musteriler = dbContext.Musterilers.AsQueryable();
+
+            if (!string.IsNullOrEmpty(arama))
+            {
+                musteriler = musteriler.Where(x =>
+                    x.MusteriAdSoyad.Contains(arama));
+            }
+
+            return View(musteriler.ToList());
         }
         [HttpGet]
         public IActionResult Create()
@@ -54,6 +62,7 @@ namespace SiparisSistemi.Controllers
         [HttpPost]
         public IActionResult Delete(Musteriler musteriler)
         {
+           
             dbContext.Remove(musteriler);
             dbContext.SaveChanges();
             return RedirectToAction("Index");

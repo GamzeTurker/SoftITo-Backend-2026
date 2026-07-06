@@ -16,8 +16,8 @@ namespace SiparisSistemi.Models
         public DateTime SiparisTarihi { get; set; }
         public decimal ToplamTutar { get; set; }
         public string SiparisDurumu { get; set; }
-        public virtual Musteriler musteriler { get; set; }
-        public virtual Urunler urunler { get; set; }
+        public virtual Musteriler? musteriler { get; set; }
+        public virtual Urunler? urunler { get; set; }
 
     }
 }

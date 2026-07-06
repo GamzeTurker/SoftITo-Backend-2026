@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SiparisSistemi.Models.Report>
+@{
+    ViewData["Title"] = "Aktif (Teslim Edilmemiş) Siparişler";
+}
+
+<div class="container py-4">
+
+    <div class="card shadow-sm border-warning border">
+
+        <div class="card-header bg-warning text-dark d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Aktif (Teslim Edilmemiş) Siparişler</h4>
+            <a asp-action="Index" class="btn btn-dark btn-sm">Geri Dön</a>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="ps-3">Sipariş ID</th>
+                            <th>Adet</th>
+                            <th>Sipariş Tarihi</th>
+                            <th>Toplam Tutar</th>
+                            <th class="pe-3">Sipariş Durumu</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="ps-3">@item.SiparisId</td>
+                                <td>@item.Adet Adet</td>
+                                <td>@item.SiparisTarihi.ToString("dd.MM.yyyy")</td>
+                                <td>@item.ToplamTutar.ToString("N2") ₺</td>
+                                <td class="pe-3">
+                                    <span class="badge bg-warning text-dark">@item.SiparisDurumu</span>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

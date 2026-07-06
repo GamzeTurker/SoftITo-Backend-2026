@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SiparisSistemi.Models.Report>
+@{
+    ViewData["Title"] = "Ürün Sipariş Detayları (2'li Join)";
+}
+
+<div class="container py-4">
+
+    <div class="card shadow-sm border-0">
+
+        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+            <h4 class="mb-0">Ürün Sipariş Detayları (2'li Join)</h4>
+            <a asp-action="Index" class="btn btn-light btn-sm">Geri Dön</a>
+        </div>
+
+        <div class="card-body p-0">
+            <div class="table-responsive">
+                <table class="table table-hover table-striped mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th class="ps-3">Sipariş ID</th>
+                            <th>Ürün Adı</th>
+                            <th>Birim Fiyat</th>
+                            <th>Sipariş Adeti</th>
+                            <th>Toplam Tutar</th>
+                            <th class="pe-3">Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td class="ps-3">@item.SiparisId</td>
+                                <td>@item.UrunAdi</td>
+                                <td>@item.Fiyat.ToString("N2") ₺</td>
+                                <td>@item.Adet Adet</td>
+                                <td>@item.ToplamTutar.ToString("N2") ₺</td>
+                                <td class="pe-3"><span class="badge bg-secondary">@item.SiparisDurumu</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>
