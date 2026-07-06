@@ -1,0 +1,38 @@
+@model WebProject.ViewModels.VerifyEmailViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>E-Posta Doğrula - Medya Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #060814 100%);">
+
+    <div class="card" style="width: 100%; max-width: 420px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border-top: 4px solid var(--primary);">
+        <h2 style="color: var(--primary); text-align: center; margin: 0 0 10px 0; font-weight: 800; letter-spacing: 0.05em;">🔑 PAROLA SIFIRLA</h2>
+        <p style="text-align: center; color: var(--muted); font-size: 14px; margin-bottom: 30px;">Kayıtlı e-posta adresinizi giriniz</p>
+
+        <form asp-action="VerifyEmail" method="post">
+            <div asp-validation-summary="ModelOnly" class="alert-danger-custom" style="padding: 10px; margin-bottom: 20px;"></div>
+
+            <div style="margin-bottom: 25px;">
+                <label asp-for="Email" style="font-weight: 600; font-size: 13px;">E-Posta Adresi</label>
+                <input asp-for="Email" class="input" placeholder="E-posta adresiniz..." required />
+                <span asp-validation-for="Email" style="color: var(--red); font-size: 12px;"></span>
+            </div>
+
+            <button type="submit" class="btn btn-create" style="width: 100%; padding: 14px; font-size: 15px;">Kullanıcıyı Ara</button>
+            <a href="/Account/Login" class="btn btn-gray" style="width: 100%; box-sizing: border-box; text-align: center; margin-top: 10px; padding: 14px; font-size: 15px; display: block;">Geri Dön</a>
+        </form>
+    </div>
+
+</body>
+</html>

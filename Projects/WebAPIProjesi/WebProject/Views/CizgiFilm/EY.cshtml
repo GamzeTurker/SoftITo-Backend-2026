@@ -1,0 +1,36 @@
+@model WebProject.Models.CizgiFilm
+
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+    <h2>@(Model.Id == 0 ? "➕ Yeni Çizgi Film Ekle" : "📝 Çizgi Film Düzenle")</h2>
+    <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+
+    <form asp-action="EY" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div style="margin-bottom: 15px;">
+            <label asp-for="Ad" style="font-weight: 600;">Çizgi Film Adı</label>
+            <input type="text" asp-for="Ad" class="input" required placeholder="Çizgi film adını giriniz..." />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label asp-for="Tur" style="font-weight: 600;">Tür</label>
+            <input type="text" asp-for="Tur" class="input" required placeholder="Eğitici, Müzikal, Macera vb..." />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+                <label asp-for="BolumSayisi" style="font-weight: 600;">Bölüm Sayısı</label>
+                <input type="number" asp-for="BolumSayisi" class="input" required min="1" placeholder="Bölüm Sayısı..." />
+            </div>
+            <div>
+                <label asp-for="YasAraligi" style="font-weight: 600;">Yaş Aralığı</label>
+                <input type="text" asp-for="YasAraligi" class="input" required placeholder="Örn: 3-6, 7-12..." />
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button type="submit" class="btn btn-create">Kaydet</button>
+            <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+        </div>
+    </form>
+</div>

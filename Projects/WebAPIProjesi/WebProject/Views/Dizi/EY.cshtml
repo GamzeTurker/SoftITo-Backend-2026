@@ -1,0 +1,36 @@
+@model WebProject.Models.Dizi
+
+<div class="card" style="max-width: 600px; margin: 0 auto;">
+    <h2>@(Model.DiziId == 0 ? "➕ Yeni Dizi Ekle" : "📝 Dizi Düzenle")</h2>
+    <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+
+    <form asp-action="EY" method="post">
+        <input type="hidden" asp-for="DiziId" />
+
+        <div style="margin-bottom: 15px;">
+            <label asp-for="DiziAd" style="font-weight: 600;">Dizi Adı</label>
+            <input type="text" asp-for="DiziAd" class="input" required placeholder="Dizi adını giriniz..." />
+        </div>
+
+        <div style="margin-bottom: 15px;">
+            <label asp-for="Tur" style="font-weight: 600;">Tür</label>
+            <input type="text" asp-for="Tur" class="input" required placeholder="Aksiyon, Komedi, Aile vb..." />
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+            <div>
+                <label asp-for="BolumSayisi" style="font-weight: 600;">Bölüm Sayısı</label>
+                <input type="number" asp-for="BolumSayisi" class="input" required min="1" placeholder="Bölüm Sayısı..." />
+            </div>
+            <div>
+                <label asp-for="YapimYili" style="font-weight: 600;">Yapım Yılı</label>
+                <input type="number" asp-for="YapimYili" class="input" required min="1800" max="@DateTime.Now.Year" placeholder="Yapım Yılı..." />
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+            <button type="submit" class="btn btn-create">Kaydet</button>
+            <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+        </div>
+    </form>
+</div>

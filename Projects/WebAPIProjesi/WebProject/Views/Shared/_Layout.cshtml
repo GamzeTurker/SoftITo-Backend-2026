@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Medya Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>🎬 MEDYA</h2>
+
+        <div class="menu">
+            <a href="/Home/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">🏠 Ana Sayfa</a>
+            <a href="/Film/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Film" ? "active" : "")">🎬 Filmler</a>
+            <a href="/Dizi/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Dizi" ? "active" : "")">📺 Diziler</a>
+            <a href="/CizgiFilm/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "CizgiFilm" ? "active" : "")">🧸 Çizgi Filmler</a>
+        </div>
+    </div>
+
+    <!-- TOPBAR -->
+    <div class="topbar">
+        <h3>Film & Dizi Yönetim Paneli (API Entegrasyonlu)</h3>
+        <div style="display: flex; align-items: center; gap: 15px;">
+            <span style="font-weight: 600; color: var(--blue);">👤 @User.Identity?.Name</span>
+            <a href="/Account/LogOut" class="btn btn-delete" style="padding: 6px 12px; font-size: 12px; margin: 0;">Çıkış Yap</a>
+        </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

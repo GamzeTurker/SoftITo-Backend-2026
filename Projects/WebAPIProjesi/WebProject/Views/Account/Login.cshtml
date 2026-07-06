@@ -1,0 +1,55 @@
+@model WebProject.ViewModels.LoginViewModel
+@{
+    Layout = null; // No sidebar on login screen
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>Giriş Yap - Medya Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; background-image: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #060814 100%);">
+
+    <div class="card" style="width: 100%; max-width: 420px; padding: 40px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); border-top: 4px solid var(--primary);">
+        <h2 style="color: var(--primary); text-align: center; margin: 0 0 10px 0; font-weight: 800; letter-spacing: 0.05em; text-shadow: 0 0 15px rgba(229, 9, 20, 0.4);">🎬 MEDYA PANEL</h2>
+        <p style="text-align: center; color: var(--muted); font-size: 14px; margin-bottom: 30px;">Hesabınıza giriş yapın</p>
+
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="ModelOnly" class="alert-danger-custom" style="padding: 10px; margin-bottom: 20px;"></div>
+
+            <div style="margin-bottom: 20px;">
+                <label asp-for="Email" style="font-weight: 600; font-size: 13px;">E-Posta</label>
+                <input asp-for="Email" class="input" placeholder="E-posta adresiniz..." required />
+                <span asp-validation-for="Email" style="color: var(--red); font-size: 12px;"></span>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between;">
+                    <label asp-for="Password" style="font-weight: 600; font-size: 13px;">Parola</label>
+                    <a href="/Account/VerifyEmail" style="color: var(--accent); font-size: 12px; text-decoration: none;">Şifremi Unuttum</a>
+                </div>
+                <input asp-for="Password" class="input" placeholder="Parolanız..." required />
+                <span asp-validation-for="Password" style="color: var(--red); font-size: 12px;"></span>
+            </div>
+
+            <div style="margin-bottom: 25px; display: flex; align-items: center; gap: 8px;">
+                <input asp-for="RememberMe" type="checkbox" style="accent-color: var(--primary); width: 16px; height: 16px; cursor: pointer;" />
+                <label asp-for="RememberMe" style="font-size: 13px; color: var(--muted); cursor: pointer; user-select: none;">Beni Hatırla</label>
+            </div>
+
+            <button type="submit" class="btn btn-create" style="width: 100%; padding: 14px; font-size: 15px;">Giriş Yap</button>
+        </form>
+
+        <div style="margin-top: 30px; text-align: center; font-size: 13px; color: var(--muted);">
+            Hesabınız yok mu? <a href="/Account/Register" style="color: var(--accent); text-decoration: none; font-weight: 600;">Kayıt Olun</a>
+        </div>
+    </div>
+
+</body>
+</html>

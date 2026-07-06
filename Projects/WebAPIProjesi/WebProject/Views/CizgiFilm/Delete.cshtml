@@ -1,0 +1,27 @@
+@model WebProject.Models.CizgiFilm
+
+<div class="card" style="border-top: 4px solid var(--red); max-width: 600px; margin: 0 auto;">
+    <h2>🗑️ Çizgi Film Silme Onayı</h2>
+    
+    <div class="alert-danger-custom">
+        ⚠️ Bu çizgi filmi silmek istediğinize emin misiniz? Bu işlem geri alınamaz!
+    </div>
+
+    <div class="card" style="background: var(--panel-2); margin-top: 15px;">
+        <p style="margin: 8px 0;"><b>No:</b> @Model.Id</p>
+        <p style="margin: 8px 0;"><b>Çizgi Film Adı:</b> @Model.Ad</p>
+        <p style="margin: 8px 0;"><b>Tür:</b> @Model.Tur</p>
+        <p style="margin: 8px 0;"><b>Bölüm Sayısı:</b> @Model.BolumSayisi</p>
+        <p style="margin: 8px 0;"><b>Yaş Aralığı:</b> @Model.YasAraligi Yaş</p>
+    </div>
+
+    <form asp-action="Delete" method="post" style="margin-top: 20px; display: flex; gap: 10px;">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="Ad" />
+        <input type="hidden" asp-for="Tur" />
+        <input type="hidden" asp-for="BolumSayisi" />
+        <input type="hidden" asp-for="YasAraligi" />
+        <button type="submit" class="btn btn-delete">❌ Silmeyi Onayla</button>
+        <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+    </form>
+</div>

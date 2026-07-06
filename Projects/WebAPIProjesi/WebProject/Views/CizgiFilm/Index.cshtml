@@ -1,0 +1,53 @@
+@model IEnumerable<WebProject.Models.CizgiFilm>
+
+<div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; background: rgba(13, 18, 44, 0.4);">
+    <div>
+        <h2 style="margin: 0 0 10px 0;">🧸 Çizgi Filmler</h2>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a asp-action="EY" class="btn btn-create">+ Yeni Çizgi Film Ekle</a>
+            <a asp-action="ExportExcel" asp-route-searchText="@ViewBag.SearchText" class="btn btn-green">Excel'e Aktar</a>
+            <a asp-action="ExportPdf" asp-route-searchText="@ViewBag.SearchText" class="btn btn-red">PDF'e Aktar</a>
+        </div>
+    </div>
+    <form method="get" asp-action="Index" style="display: flex; gap: 10px; align-items: center;">
+        <input type="text" name="searchText" value="@ViewBag.SearchText" class="input" placeholder="Çizgi Film Ara..." style="margin: 0; width: 250px;" />
+        <button type="submit" class="btn btn-blue">Ara</button>
+        @if (!string.IsNullOrEmpty(ViewBag.SearchText))
+        {
+            <a asp-action="Index" class="btn btn-gray">Temizle</a>
+        }
+    </form>
+</div>
+
+<!-- ÇİZGİ FİLM GRID (CINEMATIC) -->
+<div class="movie-grid" style="margin-top: 30px;">
+    @foreach (var item in Model)
+    {
+        <div class="movie-card">
+            <div class="movie-poster-placeholder" style="background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%);">
+                🧸
+                <div class="movie-badge-top">@item.YasAraligi Yaş</div>
+                <div class="movie-play-btn">▶</div>
+            </div>
+            <div class="movie-info">
+                <h3 class="movie-title">@item.Ad</h3>
+                <div class="movie-meta">
+                    <span class="genre">@item.Tur</span>
+                    <span>•</span>
+                    <span>@item.BolumSayisi Bölüm</span>
+                </div>
+                <div class="movie-actions">
+                    <a asp-action="EY" asp-route-id="@item.Id" class="btn btn-edit">Düzenle</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-delete">Sil</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+@if (!Model.Any())
+{
+    <div class="card" style="text-align: center; padding: 40px; margin-top: 30px;">
+        <p style="color: var(--muted); font-size: 16px; margin: 0;">Aradığınız kriterlere uygun çizgi film bulunamadı.</p>
+    </div>
+}

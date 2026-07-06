@@ -1,0 +1,27 @@
+@model WebProject.Models.Film
+
+<div class="card" style="border-top: 4px solid var(--red); max-width: 600px; margin: 0 auto;">
+    <h2>🗑️ Film Silme Onayı</h2>
+    
+    <div class="alert-danger-custom">
+        ⚠️ Bu filmi silmek istediğinize emin misiniz? Bu işlem geri alınamaz!
+    </div>
+
+    <div class="card" style="background: var(--panel-2); margin-top: 15px;">
+        <p style="margin: 8px 0;"><b>Film No:</b> @Model.FilmId</p>
+        <p style="margin: 8px 0;"><b>Film Adı:</b> @Model.FilmAd</p>
+        <p style="margin: 8px 0;"><b>Tür:</b> @Model.Tur</p>
+        <p style="margin: 8px 0;"><b>Süre:</b> @Model.Sure dk</p>
+        <p style="margin: 8px 0;"><b>Yapım Yılı:</b> @Model.YapimYili</p>
+    </div>
+
+    <form asp-action="Delete" method="post" style="margin-top: 20px; display: flex; gap: 10px;">
+        <input type="hidden" asp-for="FilmId" />
+        <input type="hidden" asp-for="FilmAd" />
+        <input type="hidden" asp-for="Tur" />
+        <input type="hidden" asp-for="Sure" />
+        <input type="hidden" asp-for="YapimYili" />
+        <button type="submit" class="btn btn-delete">❌ Silmeyi Onayla</button>
+        <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+    </form>
+</div>
