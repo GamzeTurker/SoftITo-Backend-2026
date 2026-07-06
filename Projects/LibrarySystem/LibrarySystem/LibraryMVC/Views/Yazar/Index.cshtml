@@ -1,0 +1,70 @@
+@model List<LibraryMVC.Models.Yazar>
+@{
+    ViewData["Title"] = "Yazarlar";
+}
+
+<div class="card card-custom p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="fw-bold mb-0 text-dark"><i class="fa-solid fa-pen-nib text-primary me-2"></i> Yazarlar</h4>
+        <a href="/Yazar/Create" class="btn btn-primary"><i class="fa-solid fa-plus me-1"></i> Yeni Yazar Ekle</a>
+    </div>
+
+    <!-- ARAMA VE RAPORLAMA BARBARI -->
+    <div class="row mb-3 g-2">
+        <div class="col-md-6">
+            <form method="get" action="/Yazar/Index" class="d-flex">
+                <input type="text" name="search" class="form-control me-2" placeholder="Yazar adı veya biyografi ara..." value="@ViewBag.Search" />
+                <button type="submit" class="btn btn-outline-primary px-3">Ara</button>
+                @if (!string.IsNullOrEmpty(ViewBag.Search))
+                {
+                    <a href="/Yazar/Index" class="btn btn-outline-secondary ms-1">Temizle</a>
+                }
+            </form>
+        </div>
+        <div class="col-md-6 text-md-end">
+            <a href="/Yazar/ExportExcel?search=@ViewBag.Search" class="btn btn-success me-1"><i class="fa-solid fa-file-excel me-1"></i> Excel İndir</a>
+            <a href="/Yazar/ExportPdf?search=@ViewBag.Search" class="btn btn-danger"><i class="fa-solid fa-file-pdf me-1"></i> PDF İndir</a>
+        </div>
+    </div>
+
+    <!-- TABLO -->
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr>
+                    <th style="width: 80px;">ID</th>
+                    <th>Yazar Adı Soyadı</th>
+                    <th>Biyografisi</th>
+                    <th>Doğum Tarihi</th>
+                    <th style="width: 180px;" class="text-center">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td class="fw-semibold">@item.AdSoyad</td>
+                            <td>@(item.Biyografi != null && item.Biyografi.Length > 100 ? item.Biyografi.Substring(0, 100) + "..." : item.Biyografi)</td>
+                            <td>@item.DogumTarihi?.ToString("dd.MM.yyyy")</td>
+                            <td class="text-center">
+                                <a href="/Yazar/Edit/@item.Id" class="btn btn-sm btn-outline-warning me-1"><i class="fa-solid fa-edit"></i> Düzenle</a>
+                                <form action="/Yazar/Delete/@item.Id" method="post" style="display:inline;" onsubmit="return confirm('Bu yazarı silmek istediğinize emin misiniz?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i> Sil</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="5" class="text-center text-muted">Kayıtlı yazar bulunamadı.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] | Kütüphane Otomasyonu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f6f9;
+            overflow-x: hidden;
+        }
+        .wrapper {
+            display: flex;
+            width: 100%;
+            align-items: stretch;
+        }
+        #sidebar {
+            min-width: 250px;
+            max-width: 250px;
+            background: #1e293b;
+            color: #fff;
+            transition: all 0.3s;
+            min-height: 100vh;
+        }
+        #sidebar .sidebar-header {
+            padding: 20px;
+            background: #0f172a;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        #sidebar ul.components {
+            padding: 20px 0;
+        }
+        #sidebar ul li a {
+            padding: 12px 20px;
+            font-size: 0.95rem;
+            display: block;
+            color: #94a3b8;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        #sidebar ul li a:hover, #sidebar ul li.active a {
+            color: #fff;
+            background: #334155;
+            border-left: 4px solid #3b82f6;
+        }
+        #sidebar ul li a i {
+            margin-right: 10px;
+            width: 20px;
+            text-align: center;
+        }
+        #content {
+            width: 100%;
+            padding: 30px;
+            min-height: 100vh;
+            transition: all 0.3s;
+        }
+        .navbar-custom {
+            background-color: #fff;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            margin-bottom: 25px;
+        }
+        .card-custom {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            background: #fff;
+        }
+        .footer-custom {
+            margin-top: 40px;
+            padding: 20px 0;
+            background: #fff;
+            border-top: 1px solid #e2e8f0;
+            text-align: center;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+    <!-- SIDEBAR -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            📚 Kütüphane Paneli
+        </div>
+        
+        <ul class="list-unstyled components">
+            <li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">
+                <a href="/Home/Index"><i class="fa-solid fa-gauge"></i> Gösterge Paneli</a>
+            </li>
+            <li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Yazar" ? "active" : "")">
+                <a href="/Yazar/Index"><i class="fa-solid fa-pen-nib"></i> Yazarlar</a>
+            </li>
+            <li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Kitap" ? "active" : "")">
+                <a href="/Kitap/Index"><i class="fa-solid fa-book"></i> Kitaplar</a>
+            </li>
+            <li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Uye" ? "active" : "")">
+                <a href="/Uye/Index"><i class="fa-solid fa-users"></i> Üyeler</a>
+            </li>
+            <li class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Emanet" ? "active" : "")">
+                <a href="/Emanet/Index"><i class="fa-solid fa-handshake"></i> Emanet İşlemleri</a>
+            </li>
+            <li>
+                <a href="/Account/Logout" class="text-danger"><i class="fa-solid fa-right-from-bracket"></i> Çıkış Yap</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- CONTENT -->
+    <div id="content">
+        <!-- TOP NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-light navbar-custom py-2 px-3">
+            <div class="container-fluid">
+                <span class="navbar-text fw-semibold text-dark">
+                    Hoş Geldiniz, <span class="text-primary">@User.Identity?.Name</span>
+                </span>
+                <div class="ms-auto">
+                    <span class="badge bg-primary px-3 py-2"><i class="fa-solid fa-user-shield me-1"></i> Admin</span>
+                </div>
+            </div>
+        </nav>
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+        <footer class="footer-custom">
+            &copy; @DateTime.Now.Year - Kütüphane Yönetim Sistemi
+        </footer>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

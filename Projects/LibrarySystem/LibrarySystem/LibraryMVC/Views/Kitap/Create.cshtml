@@ -1,0 +1,62 @@
+@model LibraryMVC.Models.Kitap
+@{
+    ViewData["Title"] = "Yeni Kitap Ekle";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card card-custom p-4">
+            <h4 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-plus text-primary me-2"></i> Yeni Kitap Ekle</h4>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+            <form asp-action="Create" method="post">
+                <div class="mb-3">
+                    <label class="form-label" style="font-weight: 600;">Kitap Başlığı</label>
+                    <input type="text" asp-for="Baslik" class="form-control" placeholder="Kitap başlığını girin..." required />
+                    <span asp-validation-for="Baslik" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" style="font-weight: 600;">Yazar Seçin</label>
+                    <select asp-for="YazarId" class="form-select" required>
+                        <option value="">-- Yazar Seçin --</option>
+                        @if (ViewBag.Yazarlar != null)
+                        {
+                            foreach (var yazar in (List<LibraryMVC.Models.Yazar>)ViewBag.Yazarlar)
+                            {
+                                <option value="@yazar.Id">@yazar.AdSoyad</option>
+                            }
+                        }
+                    </select>
+                    <span asp-validation-for="YazarId" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" style="font-weight: 600;">ISBN Numarası</label>
+                        <input type="text" asp-for="ISBN" class="form-control" placeholder="978-X-XX-XXXXXX-X" required />
+                        <span asp-validation-for="ISBN" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label" style="font-weight: 600;">Basım Yılı</label>
+                        <input type="number" asp-for="BasimYili" class="form-control" min="1000" max="9999" required />
+                        <span asp-validation-for="BasimYili" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-3 mb-3">
+                        <label class="form-label" style="font-weight: 600;">Sayfa Sayısı</label>
+                        <input type="number" asp-for="SayfaSayisi" class="form-control" min="1" required />
+                        <span asp-validation-for="SayfaSayisi" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="/Kitap/Index" class="btn btn-outline-secondary px-4">İptal</a>
+                    <button type="submit" class="btn btn-primary px-5">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,76 @@
+@model LibraryMVC.Models.Emanet
+@{
+    ViewData["Title"] = "Emanet İşlemi Düzenle";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card card-custom p-4">
+            <h4 class="fw-bold mb-4 text-dark"><i class="fa-solid fa-edit text-warning me-2"></i> Emanet İşlemi Düzenle</h4>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+            <input type="hidden" asp-for="Id" />
+
+            <form asp-action="Edit" method="post">
+                <div class="mb-3">
+                    <label class="form-label" style="font-weight: 600;">Emanet Edilen Kitap</label>
+                    <select asp-for="KitapId" class="form-select" required>
+                        <option value="">-- Kitap Seçin --</option>
+                        @if (ViewBag.Kitaplar != null)
+                        {
+                            foreach (var item in (List<LibraryMVC.Models.Kitap>)ViewBag.Kitaplar)
+                            {
+                                <option value="@item.Id" selected="@(item.Id == Model.KitapId ? "selected" : null)">@item.Baslik</option>
+                            }
+                        }
+                    </select>
+                    <span asp-validation-for="KitapId" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" style="font-weight: 600;">Teslim Alan Üye</label>
+                    <select asp-for="UyeId" class="form-select" required>
+                        <option value="">-- Üye Seçin --</option>
+                        @if (ViewBag.Uyeler != null)
+                        {
+                            foreach (var item in (List<LibraryMVC.Models.Uye>)ViewBag.Uyeler)
+                            {
+                                <option value="@item.Id" selected="@(item.Id == Model.UyeId ? "selected" : null)">@item.AdSoyad</option>
+                            }
+                        }
+                    </select>
+                    <span asp-validation-for="UyeId" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" style="font-weight: 600;">Emanet Tarihi</label>
+                        <input type="date" asp-for="EmanetTarihi" class="form-control" value="@(Model.EmanetTarihi.ToString("yyyy-MM-dd"))" required />
+                        <span asp-validation-for="EmanetTarihi" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label" style="font-weight: 600;">Teslim Tarihi</label>
+                        <input type="date" asp-for="TeslimTarihi" class="form-control" value="@(Model.TeslimTarihi?.ToString("yyyy-MM-dd"))" />
+                        <span asp-validation-for="TeslimTarihi" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label" style="font-weight: 600;">Durum</label>
+                    <select asp-for="Durum" class="form-select" required>
+                        <option value="Emanette" selected="@(Model.Durum == "Emanette" ? "selected" : null)">Emanette</option>
+                        <option value="Teslim Edildi" selected="@(Model.Durum == "Teslim Edildi" ? "selected" : null)">Teslim Edildi</option>
+                        <option value="Gecikmiş" selected="@(Model.Durum == "Gecikmiş" ? "selected" : null)">Gecikmiş</option>
+                    </select>
+                    <span asp-validation-for="Durum" class="text-danger"></span>
+                </div>
+
+                <div class="d-flex justify-content-between mt-4">
+                    <a href="/Emanet/Index" class="btn btn-outline-secondary px-4">İptal</a>
+                    <button type="submit" class="btn btn-warning px-5">Güncelle</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

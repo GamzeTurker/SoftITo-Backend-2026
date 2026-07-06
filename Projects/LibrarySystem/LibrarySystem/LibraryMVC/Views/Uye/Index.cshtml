@@ -1,0 +1,72 @@
+@model List<LibraryMVC.Models.Uye>
+@{
+    ViewData["Title"] = "Üyeler";
+}
+
+<div class="card card-custom p-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h4 class="fw-bold mb-0 text-dark"><i class="fa-solid fa-users text-primary me-2"></i> Üyeler</h4>
+        <a href="/Uye/Create" class="btn btn-primary"><i class="fa-solid fa-plus me-1"></i> Yeni Üye Ekle</a>
+    </div>
+
+    <!-- ARAMA VE RAPORLAMA BARBARI -->
+    <div class="row mb-3 g-2">
+        <div class="col-md-6">
+            <form method="get" action="/Uye/Index" class="d-flex">
+                <input type="text" name="search" class="form-control me-2" placeholder="Üye adı, e-posta veya telefon ara..." value="@ViewBag.Search" />
+                <button type="submit" class="btn btn-outline-primary px-3">Ara</button>
+                @if (!string.IsNullOrEmpty(ViewBag.Search))
+                {
+                    <a href="/Uye/Index" class="btn btn-outline-secondary ms-1">Temizle</a>
+                }
+            </form>
+        </div>
+        <div class="col-md-6 text-md-end">
+            <a href="/Uye/ExportExcel?search=@ViewBag.Search" class="btn btn-success me-1"><i class="fa-solid fa-file-excel me-1"></i> Excel İndir</a>
+            <a href="/Uye/ExportPdf?search=@ViewBag.Search" class="btn btn-danger"><i class="fa-solid fa-file-pdf me-1"></i> PDF İndir</a>
+        </div>
+    </div>
+
+    <!-- TABLO -->
+    <div class="table-responsive">
+        <table class="table table-hover align-middle">
+            <thead>
+                <tr>
+                    <th style="width: 80px;">ID</th>
+                    <th>Üye Adı Soyadı</th>
+                    <th>E-Posta</th>
+                    <th>Telefon</th>
+                    <th>Kayıt Tarihi</th>
+                    <th style="width: 180px;" class="text-center">İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null && Model.Count > 0)
+                {
+                    foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Id</td>
+                            <td class="fw-semibold">@item.AdSoyad</td>
+                            <td>@item.Eposta</td>
+                            <td>@item.Telefon</td>
+                            <td>@item.KayitTarihi.ToString("dd.MM.yyyy")</td>
+                            <td class="text-center">
+                                <a href="/Uye/Edit/@item.Id" class="btn btn-sm btn-outline-warning me-1"><i class="fa-solid fa-edit"></i> Düzenle</a>
+                                <form action="/Uye/Delete/@item.Id" method="post" style="display:inline;" onsubmit="return confirm('Bu üyeyi silmek istediğinize emin misiniz?');">
+                                    <button type="submit" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i> Sil</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="6" class="text-center text-muted">Kayıtlı üye bulunamadı.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

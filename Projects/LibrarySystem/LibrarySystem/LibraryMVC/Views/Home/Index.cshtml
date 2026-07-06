@@ -1,0 +1,137 @@
+@{
+    ViewData["Title"] = "Gösterge Paneli";
+}
+
+@if (ViewBag.Error != null)
+{
+    <div class="alert alert-danger text-center mb-4">
+        <i class="fa-solid fa-triangle-exclamation me-2"></i> @ViewBag.Error
+    </div>
+}
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card card-custom bg-primary text-white p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6 class="text-uppercase mb-1" style="font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Toplam Kitap</h6>
+                    <h2 class="mb-0 fw-bold">@ViewBag.KitapSayisi</h2>
+                </div>
+                <div class="fs-1 opacity-50">
+                    <i class="fa-solid fa-book"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-custom bg-success text-white p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6 class="text-uppercase mb-1" style="font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Toplam Üye</h6>
+                    <h2 class="mb-0 fw-bold">@ViewBag.UyeSayisi</h2>
+                </div>
+                <div class="fs-1 opacity-50">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-custom bg-info text-white p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6 class="text-uppercase mb-1" style="font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Aktif Emanet</h6>
+                    <h2 class="mb-0 fw-bold">@ViewBag.AktifEmanetler</h2>
+                </div>
+                <div class="fs-1 opacity-50">
+                    <i class="fa-solid fa-handshake"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card card-custom bg-warning text-white p-3">
+            <div class="d-flex justify-content-between align-items-center">
+                <div>
+                    <h6 class="text-uppercase mb-1" style="font-size: 0.8rem; font-weight: 600; opacity: 0.8;">Toplam Yazar</h6>
+                    <h2 class="mb-0 fw-bold">@ViewBag.YazarSayisi</h2>
+                </div>
+                <div class="fs-1 opacity-50">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <!-- SON HAREKETLER -->
+    <div class="col-md-8">
+        <div class="card card-custom p-4">
+            <h5 class="fw-bold mb-3 text-dark"><i class="fa-solid fa-clock-rotate-left text-primary me-2"></i> Son Emanet Kitap Hareketleri</h5>
+            <div class="table-responsive">
+                <table class="table align-middle">
+                    <thead>
+                        <tr>
+                            <th>Üye</th>
+                            <th>Kitap</th>
+                            <th>Emanet Tarihi</th>
+                            <th>Durum</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (ViewBag.SonEmanetler != null && ((List<LibraryMVC.Models.Emanet>)ViewBag.SonEmanetler).Count > 0)
+                        {
+                            foreach (var item in (List<LibraryMVC.Models.Emanet>)ViewBag.SonEmanetler)
+                            {
+                                <tr>
+                                    <td class="fw-semibold">@item.UyeAdSoyad</td>
+                                    <td>@item.KitapBaslik</td>
+                                    <td>@item.EmanetTarihi.ToString("dd.MM.yyyy")</td>
+                                    <td>
+                                        @if (item.Durum == "Emanette")
+                                        {
+                                            <span class="badge bg-primary">Emanette</span>
+                                        }
+                                        else if (item.Durum == "Teslim Edildi")
+                                        {
+                                            <span class="badge bg-success">Teslim Edildi</span>
+                                        }
+                                        else
+                                        {
+                                            <span class="badge bg-danger">Gecikmiş</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="4" class="text-center text-muted">Kayıtlı hareket bulunmuyor.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIZLI ERİŞİM -->
+    <div class="col-md-4">
+        <div class="card card-custom p-4">
+            <h5 class="fw-bold mb-3 text-dark"><i class="fa-solid fa-bolt text-warning me-2"></i> Hızlı İşlemler</h5>
+            <div class="list-group">
+                <a href="/Emanet/Create" class="list-group-item list-group-item-action py-3">
+                    <i class="fa-solid fa-handshake text-primary me-2"></i> Yeni Emanet Kaydı Oluştur
+                </a>
+                <a href="/Kitap/Create" class="list-group-item list-group-item-action py-3">
+                    <i class="fa-solid fa-book-medical text-success me-2"></i> Yeni Kitap Ekle
+                </a>
+                <a href="/Uye/Create" class="list-group-item list-group-item-action py-3">
+                    <i class="fa-solid fa-user-plus text-info me-2"></i> Yeni Üye Kaydet
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
