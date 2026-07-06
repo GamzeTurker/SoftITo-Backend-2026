@@ -8,3 +8,46 @@ ASP.NET Core MVC
 Entity Framework Core
 MS SQL Server
 QuestPDF
+
+
+
+## 📷 Screenshots
+
+### Home Page
+
+![Home Page](./images/home.png)
+
+### Customers
+
+![Customers](./images/customers.png)
+
+### Products
+
+![Products](./images/products.png)
+
+### Orders
+
+![Orders](./images/orders.png)
+
+### Reports
+
+![Reports](./images/reports.png)
+
+### Report Details
+
+![Report Details](./images/reportsDetail.png)
+
+### Create Order
+
+![Create](./images/create.png)
+
+### Edit Order
+
+![Edit](./images/edit.png)
+
+### Delete Order
+
+![Delete](./images/delete.png)
+
+
+
