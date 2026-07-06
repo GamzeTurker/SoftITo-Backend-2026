@@ -14,3 +14,10 @@ High performance is maintained throughout the system via strategic in-memory cac
 - Bootstrap 5 & Bootstrap Icons
 📷 Screenshots
 
+### Giriş ve Kayıt Ekranları (Login & Sign Up)
+![Admin Giriş Paneli](images/adminLogin.png)
+![Kayıt Ol Ekranı](images/signUp.png)
+
+### Gösterge Panelleri (Dashboards)
+![Admin Gösterge Paneli](images/adminHome.png)
+![Öğrenci Gösterge Paneli](images/studentHome.png)
