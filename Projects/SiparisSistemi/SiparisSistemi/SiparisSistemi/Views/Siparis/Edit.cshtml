@@ -1,0 +1,116 @@
+﻿@model SiparisSistemi.Models.Siparisler
+@{
+    ViewData["Title"] = "Edit";
+}
+<div class="container py-4">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-8">
+
+            <div class="card shadow border-0">
+
+                <!-- HEADER -->
+                <div class="card-header bg-warning text-dark">
+                    <h4 class="mb-0">Sipariş Düzenle</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- HATA MESAJI -->
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                            {
+                                <div>@error.ErrorMessage</div>
+                            }
+                        </div>
+                    }
+
+                    <form asp-action="Edit" method="post">
+
+                        <input type="hidden" asp-for="SiparisId" />
+
+                        <!-- MÜŞTERİ -->
+                        <div class="mb-3">
+                            <label class="form-label">Müşteri</label>
+                            <select asp-for="MusteriId"
+                                    asp-items="ViewBag.Musteriler"
+                                    class="form-select">
+                            </select>
+                        </div>
+
+                        <!-- ÜRÜN -->
+                        <div class="mb-3">
+                            <label class="form-label">Ürün</label>
+                            <select asp-for="UrunId"
+                                    asp-items="ViewBag.Urunler"
+                                    class="form-select">
+                            </select>
+                        </div>
+
+                        <!-- ADET -->
+                        <div class="mb-3">
+                            <label class="form-label">Adet</label>
+
+                            <div class="input-group">
+                                <button type="button" class="btn btn-outline-secondary" onclick="azalt()">-</button>
+
+                                <input asp-for="Adet"
+                                       id="adet"
+                                       type="number"
+                                       class="form-control text-center"
+                                       min="1" />
+
+                                <button type="button" class="btn btn-outline-secondary" onclick="arttir()">+</button>
+                            </div>
+                        </div>
+
+                        <!-- TARİH -->
+                        <div class="mb-3">
+                            <label class="form-label">Sipariş Tarihi</label>
+                            <input asp-for="SiparisTarihi"
+                                   type="date"
+                                   class="form-control" />
+                        </div>
+
+                        <!-- DURUM -->
+                        <div class="mb-3">
+                            <label class="form-label">Durum</label>
+                            <select asp-for="SiparisDurumu" class="form-select">
+                                <option>Hazırlanıyor</option>
+                                <option>Kargoda</option>
+                                <option>Teslim Edildi</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary w-100">
+                            Güncelle
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function arttir() {
+        let input = document.getElementById("adet");
+        input.value = parseInt(input.value || 0) + 1;
+    }
+
+    function azalt() {
+        let input = document.getElementById("adet");
+        if (parseInt(input.value) > 1) {
+            input.value = parseInt(input.value) - 1;
+        }
+    }
+</script>

@@ -1,0 +1,69 @@
+﻿@model SiparisSistemi.Models.Urunler
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+
+        <div class="col-lg-6">
+
+            <div class="card shadow border-danger">
+
+                <!-- HEADER (BAŞLIK) -->
+                <div class="card-header bg-danger text-white">
+                    <h4 class="mb-0">Ürün Silme Onayı</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <!-- UYARI ALANI -->
+                    <div class="alert alert-warning">
+                        ⚠ Bu ürünü silmek üzeresiniz. Bu işlem geri alınamaz.
+                    </div>
+
+                    <!-- ÜRÜN DETAYLARI -->
+                    <ul class="list-group mb-3">
+
+                        <li class="list-group-item">
+                            <b>Ürün ID:</b> @Model.UrunId
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Ürün Adı:</b> @Model.UrunAdi
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Fiyat:</b> @Model.Fiyat.ToString("N2") ₺
+                        </li>
+
+                        <li class="list-group-item">
+                            <b>Stok:</b> @Model.Stok adet
+                        </li>
+
+                    </ul>
+
+                    <!-- SİLME FORMU -->
+                    <form asp-action="Delete" method="post">
+
+                        <input type="hidden" asp-for="UrunId" />
+
+                        <button type="submit" class="btn btn-danger w-100 mb-2">
+                            Evet, Sil
+                        </button>
+
+                        <a asp-action="Index" class="btn btn-secondary w-100">
+                            Vazgeç
+                        </a>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

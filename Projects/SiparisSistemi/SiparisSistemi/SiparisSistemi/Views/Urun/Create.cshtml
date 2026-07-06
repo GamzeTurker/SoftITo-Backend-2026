@@ -1,0 +1,62 @@
+﻿@model SiparisSistemi.Models.Urunler
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container py-4">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-primary text-white">
+            <h4>Yeni Ürün Ekle</h4>
+        </div>
+
+        <div class="card-body">
+
+            <!-- 🔥 HATA MESAJI BURAYA -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <div>@error.ErrorMessage</div>
+                    }
+                </div>
+            }
+
+            <form asp-action="Create" method="post">
+
+                <!-- ÜRÜN ADI -->
+                <div class="mb-3">
+                    <label class="form-label">Ürün Adı</label>
+                    <input asp-for="UrunAdi" class="form-control" placeholder="Ürün adını giriniz" />
+                </div>
+
+                <!-- FİYAT -->
+                <div class="mb-3">
+                    <label class="form-label">Fiyat (₺)</label>
+                    <input asp-for="Fiyat" type="number" step="0.01" class="form-control" placeholder="0.00" />
+                </div>
+
+                <!-- STOK -->
+                <div class="mb-3">
+                    <label class="form-label">Stok Adeti</label>
+                    <input asp-for="Stok" type="number" class="form-control" placeholder="0" />
+                </div>
+
+                <!-- KAYDET / İPTAL BUTONLARI -->
+                <div class="d-flex gap-2">
+                    <button type="submit" class="btn btn-success">
+                        Kaydet
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary">
+                        Vazgeç
+                    </a>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,80 @@
+﻿@model SiparisSistemi.Models.Siparisler
+@{
+    ViewData["Title"] = "Create";
+}
+<div class="container">
+
+    <div class="card shadow-sm">
+
+        <div class="card-header bg-primary text-white">
+            <h4>Yeni Sipariş Oluştur</h4>
+        </div>
+
+        <div class="card-body">
+
+            <!-- 🔥 HATA MESAJI BURAYA -->
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger">
+                    @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                    {
+                        <div>@error.ErrorMessage</div>
+                    }
+                </div>
+            }
+
+            <form asp-action="Create" method="post">
+
+                <!-- MÜŞTERİ -->
+                <div class="mb-3">
+                    <label>Müşteri</label>
+                    <select asp-for="MusteriId"
+                            asp-items="ViewBag.Musteriler"
+                            class="form-select">
+                        <option>Seçiniz</option>
+                    </select>
+                </div>
+
+                <!-- ÜRÜN -->
+                <div class="mb-3">
+                    <label>Ürün</label>
+                    <select asp-for="UrunId"
+                            asp-items="ViewBag.Urunler"
+                            class="form-select">
+                        <option>Seçiniz</option>
+                    </select>
+                </div>
+
+                <!-- ADET -->
+                <div class="mb-3">
+                    <label>Adet</label>
+                    <input asp-for="Adet" class="form-control" />
+                </div>
+
+                <!-- TARİH -->
+                <div class="mb-3">
+                    <label>Tarih</label>
+                    <input asp-for="SiparisTarihi" type="date" class="form-control" />
+                </div>
+
+                <!-- DURUM -->
+                <div class="mb-3">
+                    <label>Durum</label>
+                    <select asp-for="SiparisDurumu" class="form-select">
+                        <option>Hazırlanıyor</option>
+                        <option>Kargoda</option>
+                        <option>Teslim Edildi</option>
+                    </select>
+                </div>
+
+                <button class="btn btn-success">
+                    Kaydet
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

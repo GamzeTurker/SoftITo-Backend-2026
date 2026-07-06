@@ -1,0 +1,52 @@
+﻿@model SiparisSistemi.Models.Musteriler;
+
+@{
+    ViewData["Title"]="Create";
+}
+<div class="container py-5">
+
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+
+            <div class="card shadow">
+
+                <div class="card-header bg-primary text-white">
+                    <h4>Yeni Müşteri</h4>
+                </div>
+
+                <div class="card-body">
+
+                    <form asp-action="Create" method="post">
+
+                        <!-- AD SOYAD -->
+                        <div class="mb-3">
+                            <label>Ad Soyad</label>
+                            <input asp-for="MusteriAdSoyad" class="form-control" />
+                        </div>
+
+                        <!-- TELEFON -->
+                        <div class="mb-3">
+                            <label>Telefon</label>
+                            <input asp-for="Telefon" class="form-control" />
+                        </div>
+
+                        <!-- DOĞUM TARİHİ -->
+                        <div class="mb-3">
+                            <label>Doğum Tarihi</label>
+                            <input asp-for="DogumTarihi" type="date" class="form-control" />
+                        </div>
+
+                        <button class="btn btn-success w-100">
+                            Kaydet
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>b

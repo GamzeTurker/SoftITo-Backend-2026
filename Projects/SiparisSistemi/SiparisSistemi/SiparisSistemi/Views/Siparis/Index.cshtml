@@ -1,0 +1,240 @@
+﻿@model IEnumerable<SiparisSistemi.Models.Siparisler>;
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container-fluid">
+
+<!-- ÜST BAŞLIK -->
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+    <div>
+        <h2 class="fw-bold mb-1">
+            Sipariş Yönetimi
+        </h2>
+
+        <p class="text-muted mb-0">
+            Tüm siparişleri görüntüleyin ve yönetin
+        </p>
+    </div>
+
+    <a asp-action="Create"
+       class="btn btn-primary px-4">
+
+        + Yeni Sipariş Oluştur
+
+    </a>
+
+</div>
+    <div class="mb-3">
+        <a asp-controller="Siparis" asp-action="ExportToPdf" class="btn btn-danger">
+            <i class="fa fa-file-pdf"></i> PDF Olarak İndir
+        </a>
+        <!-- YENİ: Excel Butonumuz -->
+        <a asp-controller="Siparis" asp-action="ExportToExcel" class="btn btn-success">
+            <i class="fa fa-file-excel"></i> Excel Olarak İndir
+        </a>
+    </div>
+
+<!-- İSTATİSTİK KARTLARI -->
+
+<div class="row mb-4">
+
+    <div class="col-md-4">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Toplam Sipariş
+                </h6>
+
+                <h3 class="fw-bold">
+                    @Model.Count()
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Aktif Siparişler
+                </h6>
+
+                <h3 class="fw-bold text-warning">
+                    @Model.Count(x=>x.SiparisDurumu=="Hazırlanıyor")
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body">
+
+                <h6 class="text-muted">
+                    Teslim Edilen
+                </h6>
+
+                <h3 class="fw-bold text-success">
+                    @Model.Count(x=>x.SiparisDurumu=="Teslim Edildi")
+                </h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ARAMA -->
+
+<div class="card border-0 shadow-sm mb-4">
+
+    <div class="card-body">
+
+            <!-- ARAMA -->
+            <form method="get" asp-action="Index" class="mb-3">
+                <div class="input-group">
+                    <input type="text" name="arama" class="form-control" placeholder="Ürün ara..." />
+                    <button class="btn btn-outline-primary">Ara</button>
+                </div>
+            </form>
+
+    </div>
+
+</div>
+
+<!-- TABLO -->
+
+<div class="card border-0 shadow-sm">
+
+    <div class="card-body p-0">
+
+        <table class="table table-hover align-middle mb-0">
+
+            <thead class="table-light">
+
+                <tr>
+
+                    <th>#</th>
+                    <th>Müşteri</th>
+                    <th>Ürün</th>
+                    <th>Adet</th>
+                    <th>Tarih</th>
+                    <th>Tutar</th>
+                    <th>Durum</th>
+                    <th class="text-center">
+                        İşlemler
+                    </th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach(var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @item.SiparisId
+                        </td>
+
+                        <td>
+                            @item.musteriler.MusteriAdSoyad
+                           
+                        </td>
+
+                        <td>
+                            @item.urunler.UrunAdi
+                        </td>
+
+                        <td>
+                            @item.Adet
+                        </td>
+
+                        <td>
+                            @item.SiparisTarihi.ToString("dd.MM.yyyy")
+                        </td>
+
+                        <td>
+                            @item.ToplamTutar ₺
+                        </td>
+
+                        <td>
+
+                            @if(item.SiparisDurumu=="Hazırlanıyor")
+                            {
+                                <span class="badge bg-warning">
+                                    Hazırlanıyor
+                                </span>
+                            }
+
+                            @if(item.SiparisDurumu=="Kargoda")
+                            {
+                                <span class="badge bg-info">
+                                    Kargoda
+                                </span>
+                            }
+
+                            @if(item.SiparisDurumu=="Teslim Edildi")
+                            {
+                                <span class="badge bg-success">
+                                    Teslim Edildi
+                                </span>
+                            }
+
+                        </td>
+
+                        <td class="text-center">
+
+                            <a asp-action="Edit"
+                               asp-route-id="@item.SiparisId"
+                               class="btn btn-sm btn-outline-primary">
+
+                                Düzenle
+
+                            </a>
+
+                            <a asp-action="Delete"
+                               asp-route-id="@item.SiparisId"
+                               class="btn btn-sm btn-outline-danger">
+
+                                Sil
+
+                            </a>
+
+                        </td>
+
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+```
+
+</div>
