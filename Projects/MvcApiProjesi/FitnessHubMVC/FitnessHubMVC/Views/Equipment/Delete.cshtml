@@ -1,0 +1,10 @@
+﻿@model FitnessHubMVC.Models.Equipment
+
+<h3>Are you sure you want to delete this?</h3>
+
+<p>@Model.EquipmentName</p>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="EquipmentId" />
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>

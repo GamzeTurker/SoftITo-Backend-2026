@@ -1,0 +1,52 @@
+﻿@model FitnessHubMVC.Models.Equipment
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 style="font-weight:700;color:var(--tx)">Edit Equipment</h2>
+
+        <a asp-action="Index" class="btn btn-outline-light btn-sm">
+            Back to List
+        </a>
+    </div>
+
+    <div class="table-card">
+
+        <form asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="EquipmentId" />
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label class="form-label">Equipment Name</label>
+                    <input asp-for="EquipmentName" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Brand</label>
+                    <input asp-for="Brand" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Quantity</label>
+                    <input asp-for="Quantity" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Purchase Date</label>
+                    <input asp-for="PurchaseDate" type="date" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-success w-100 py-2">
+                        Update Equipment
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>

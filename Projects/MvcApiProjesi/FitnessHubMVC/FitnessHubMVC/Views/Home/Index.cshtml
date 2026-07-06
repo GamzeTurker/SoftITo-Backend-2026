@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<div class="container py-5">
+
+    <!-- HOŞ GELDİN -->
+    <div class="text-center mb-5">
+        <h1 style="font-weight:700; color:var(--tx)">
+            FitnessHub Dashboard
+        </h1>
+
+        <p style="color:var(--tx2); font-size:1.1rem">
+            Spor salonu yönetim paneline hoş geldiniz.
+        </p>
+    </div>
+
+
+    <!-- SAYILAR -->
+    <div class="row g-4 mb-5">
+
+        <!-- Member -->
+        <div class="col-md-4">
+            <div class="table-card text-center p-4">
+
+                <h5 style="color:var(--tx2)">
+                    Total Members
+                </h5>
+
+                <h1 style="
+                    color:#60a5fa;
+                    font-weight:700;">
+                    @ViewBag.MemberCount
+                </h1>
+
+            </div>
+        </div>
+
+
+        <!-- Trainer -->
+        <div class="col-md-4">
+            <div class="table-card text-center p-4">
+
+                <h5 style="color:var(--tx2)">
+                    Total Trainers
+                </h5>
+
+                <h1 style="
+                    color:#a855f7;
+                    font-weight:700;">
+                    @ViewBag.TrainerCount
+                </h1>
+
+            </div>
+        </div>
+
+
+        <!-- Equipment -->
+        <div class="col-md-4">
+            <div class="table-card text-center p-4">
+
+                <h5 style="color:var(--tx2)">
+                    Total Equipments
+                </h5>
+
+                <h1 style="
+                    color:#34d399;
+                    font-weight:700;">
+                    @ViewBag.EquipmentCount
+                </h1>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="row g-4 mt-4">
+
+        <!-- Son Üyeler -->
+        <div class="col-md-4">
+            <div class="table-card p-3">
+
+                <h5 style="color:var(--tx)">
+                    Latest Members
+                </h5>
+
+                @foreach (var item in ViewBag.LastMembers)
+                {
+                    <div class="border-bottom py-2">
+                        <div class="fw-bold">
+                            @item.FullName
+                        </div>
+
+                        <small style="color:var(--tx2)">
+                            @item.MembershipType - Age: @item.Age
+                        </small>
+                    </div>
+                }
+
+            </div>
+        </div>
+
+
+        <!-- Son Eğitmenler -->
+        <div class="col-md-4">
+            <div class="table-card p-3">
+
+                <h5 style="color:var(--tx)">
+                    Latest Trainers
+                </h5>
+
+                @foreach (var item in ViewBag.LastTrainers)
+                {
+                    <div class="border-bottom py-2">
+
+                        <div class="fw-bold">
+                            @item.FullName
+                        </div>
+
+                        <small style="color:var(--tx2)">
+                            @item.Specialty
+                        </small>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+
+
+        <!-- Son Ekipmanlar -->
+        <div class="col-md-4">
+            <div class="table-card p-3">
+
+                <h5 style="color:var(--tx)">
+                    Latest Equipments
+                </h5>
+
+                @foreach (var item in ViewBag.LastEquipments)
+                {
+                    <div class="border-bottom py-2">
+
+                        <div class="fw-bold">
+                            @item.EquipmentName
+                        </div>
+
+                        <small style="color:var(--tx2)">
+                            @item.Brand - Qty: @item.Quantity
+                        </small>
+
+                    </div>
+                }
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>

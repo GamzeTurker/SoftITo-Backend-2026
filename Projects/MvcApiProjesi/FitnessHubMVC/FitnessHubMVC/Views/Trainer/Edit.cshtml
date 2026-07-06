@@ -1,0 +1,52 @@
+﻿@model FitnessHubMVC.Models.Trainer
+
+<div class="container py-4">
+
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 style="font-weight:700;color:var(--tx)">Edit Trainer</h2>
+
+        <a asp-action="Index" class="btn btn-outline-light btn-sm">
+            Back to List
+        </a>
+    </div>
+
+    <div class="table-card p-3">
+
+        <form asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="TrainerId" />
+
+            <div class="row g-3">
+
+                <div class="col-md-6">
+                    <label class="form-label">Full Name</label>
+                    <input asp-for="FullName" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Specialty</label>
+                    <input asp-for="Specialty" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Salary</label>
+                    <input asp-for="Salary" type="number" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Experience Year</label>
+                    <input asp-for="ExperienceYear" type="number" class="form-control nexus-input" />
+                </div>
+
+                <div class="col-12 mt-3">
+                    <button type="submit" class="btn btn-primary w-100 py-2">
+                        Update Trainer
+                    </button>
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</div>

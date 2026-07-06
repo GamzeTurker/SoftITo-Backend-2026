@@ -1,0 +1,65 @@
+﻿@model FitnessHubMVC.Models.Trainer
+
+<div class="container py-4">
+
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 style="font-weight:700;color:var(--tx)">Create Trainer</h2>
+
+        <a asp-action="Index" class="btn btn-outline-light btn-sm">
+            Back to List
+        </a>
+    </div>
+
+    <!-- CARD WRAPPER (Index style) -->
+    <div class="table-card">
+
+        <div class="row">
+
+            <div class="col-md-12">
+
+                <form asp-action="Create" method="post">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-6">
+                            <label class="form-label">Full Name</label>
+                            <input asp-for="FullName"
+                                   class="form-control nexus-input" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Specialty</label>
+                            <input asp-for="Specialty"
+                                   class="form-control nexus-input" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Salary</label>
+                            <input asp-for="Salary"
+                                   class="form-control nexus-input" />
+                        </div>
+
+                        <div class="col-md-6">
+                            <label class="form-label">Experience Year</label>
+                            <input asp-for="ExperienceYear"
+                                   class="form-control nexus-input" />
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <button type="submit"
+                                    class="btn btn-success w-100 py-2">
+                                Create Trainer
+                            </button>
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
