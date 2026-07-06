@@ -1,0 +1,34 @@
+﻿
+
+@model dpperUygulama.Models.Customer
+
+<div class="card">
+
+    <h2>✏️ Müşteri Ekle / Düzenle</h2>
+
+    <form asp-action="EY" method="post">
+
+        <input type="hidden" asp-for="CustomerId" />
+
+        <label>Ad Soyad</label>
+        <input asp-for="FullName" class="input" placeholder="Ad Soyad girin" />
+
+        <label>Telefon</label>
+        <input asp-for="Phone" class="input" placeholder="Telefon girin" />
+
+        <label>Adres</label>
+        <input asp-for="Address" class="input" placeholder="Adres girin" />
+
+        <br />
+
+        <button type="submit" class="btn btn-create">
+            💾 Kaydet
+        </button>
+
+        <a asp-action="Index" class="btn btn-gray">
+            ← Geri
+        </a>
+
+    </form>
+
+</div>

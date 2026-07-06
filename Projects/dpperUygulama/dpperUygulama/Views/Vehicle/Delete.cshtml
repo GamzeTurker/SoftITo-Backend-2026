@@ -1,0 +1,22 @@
+@model dpperUygulama.Models.Vehicle
+
+<div class="card" style="border-top: 4px solid var(--red); max-width: 600px; margin: 0 auto;">
+    <h2>🗑️ Araç Silme Onayı</h2>
+    
+    <div class="alert-danger-custom">
+        ⚠️ Bu aracı silmek istediğinize emin misiniz? Araca ait servis kayıtları da silinecektir!
+    </div>
+
+    <div class="card" style="background: var(--panel-2); margin-top: 15px;">
+        <p style="margin: 8px 0;"><b>Araç No:</b> @Model.VehicleId</p>
+        <p style="margin: 8px 0;"><b>Marka:</b> @Model.Brand</p>
+        <p style="margin: 8px 0;"><b>Model:</b> @Model.Model</p>
+        <p style="margin: 8px 0;"><b>Plaka:</b> @Model.Plate</p>
+    </div>
+
+    <form asp-action="Delete" method="post" style="margin-top: 20px; display: flex; gap: 10px;">
+        <input type="hidden" asp-for="VehicleId" />
+        <button type="submit" class="btn btn-delete">❌ Silmeyi Onayla</button>
+        <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+    </form>
+</div>

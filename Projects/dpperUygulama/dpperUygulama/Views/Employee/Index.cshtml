@@ -1,0 +1,56 @@
+@model IEnumerable<dpperUygulama.Models.Employee>
+
+<div class="card" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+    <div>
+        <h2 style="margin: 0 0 10px 0;">🧑‍🔧 Personel</h2>
+        <a asp-action="EY" class="btn btn-create">+ Yeni Personel</a>
+    </div>
+    <form method="get" asp-action="Index" style="display: flex; gap: 10px; align-items: center;">
+        <input type="text" name="searchText" value="@ViewBag.SearchText" class="input" placeholder="Personel Ara (Ad, Görev...)" style="margin: 0; width: 250px;" />
+        <button type="submit" class="btn btn-blue">Ara</button>
+        @if (!string.IsNullOrEmpty(ViewBag.SearchText))
+        {
+            <a asp-action="Index" class="btn btn-gray">Temizle</a>
+        }
+    </form>
+</div>
+
+<div class="card">
+
+<table class="table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Ad Soyad</th>
+            <th>Görev</th>
+            <th>İşlemler</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.EmployeeId</td>
+                <td>@item.EmployeeName</td>
+                <td>@item.JobTitle</td>
+                <td>
+                        <a asp-action="EY"
+                           asp-route-id="@item.EmployeeId"
+                           class="btn btn-edit">
+                            Düzenle
+                        </a>
+
+                        <a asp-action="Delete"
+                           asp-route-id="@item.EmployeeId"
+                           class="btn btn-delete">
+                            Sil
+                        </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+</div>

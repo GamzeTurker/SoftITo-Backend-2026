@@ -1,0 +1,25 @@
+@model dpperUygulama.Models.ServiceRecord
+
+<div class="card" style="border-top: 4px solid var(--red); max-width: 600px; margin: 0 auto;">
+    <h2>🗑️ Servis Kaydı Silme Onayı</h2>
+    
+    <div class="alert-danger-custom">
+        ⚠️ Bu servis kaydını silmek istediğinize emin misiniz? Bu işlem geri alınamaz!
+    </div>
+
+    <div class="card" style="background: var(--panel-2); margin-top: 15px;">
+        <p style="margin: 8px 0;"><b>Kayıt No:</b> @Model.ServiceId</p>
+        <p style="margin: 8px 0;"><b>Müşteri:</b> @Model.FullName</p>
+        <p style="margin: 8px 0;"><b>Araç:</b> @Model.Brand - @Model.Plate</p>
+        <p style="margin: 8px 0;"><b>Personel:</b> @Model.EmployeeName</p>
+        <p style="margin: 8px 0;"><b>Tarih:</b> @Model.ServiceDate.ToString("dd.MM.yyyy")</p>
+        <p style="margin: 8px 0;"><b>Açıklama:</b> @Model.Description</p>
+        <p style="margin: 8px 0;"><b>Ücret:</b> @Model.Cost.ToString("F2") ₺</p>
+    </div>
+
+    <form asp-action="Delete" method="post" style="margin-top: 20px; display: flex; gap: 10px;">
+        <input type="hidden" asp-for="ServiceId" />
+        <button type="submit" class="btn btn-delete">❌ Silmeyi Onayla</button>
+        <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+    </form>
+</div>

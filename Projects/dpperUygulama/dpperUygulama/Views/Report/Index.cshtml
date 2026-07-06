@@ -1,0 +1,117 @@
+@model dpperUygulama.Models.ReportModel
+
+@{
+    var service = ViewBag.ServiceReport as dpperUygulama.Models.ReportModel;
+    var topVehicle = ViewBag.TopVehicleReport as dpperUygulama.Models.ReportModel;
+    var topEmployee = ViewBag.TopEmployeeReport as dpperUygulama.Models.ReportModel;
+    var totalIncome = ViewBag.TotalIncomeReport as dpperUygulama.Models.ReportModel;
+}
+
+<h2>📊 Raporlar ve Analizler</h2>
+
+<!-- DASHBOARD COUNTERS -->
+<div class="grid-4">
+    <!-- Toplam Servis -->
+    <div class="report-stat-card">
+        <div class="report-icon">🔧</div>
+        <div class="report-stat-info">
+            <h3>Toplam Servis</h3>
+            <p>@service?.TotalService Adet</p>
+        </div>
+    </div>
+
+    <!-- Toplam Gelir -->
+    <div class="report-stat-card">
+        <div class="report-icon" style="color: var(--green); background: rgba(34, 197, 94, 0.08);">💰</div>
+        <div class="report-stat-info">
+            <h3>Toplam Gelir</h3>
+            <p>@service?.TotalIncome.ToString("F2") ₺</p>
+        </div>
+    </div>
+
+    <!-- En Aktif Araç -->
+    <div class="report-stat-card">
+        <div class="report-icon" style="color: var(--orange); background: rgba(249, 115, 22, 0.08);">🚘</div>
+        <div class="report-stat-info">
+            <h3>En Aktif Araç</h3>
+            <p>@topVehicle?.Brand (@topVehicle?.Plate)</p>
+        </div>
+    </div>
+
+    <!-- En Aktif Personel -->
+    <div class="report-stat-card">
+        <div class="report-icon" style="color: var(--purple); background: rgba(168, 85, 247, 0.08);">🧑‍🔧</div>
+        <div class="report-stat-info">
+            <h3>En Aktif Usta</h3>
+            <p>@topEmployee?.EmployeeName</p>
+        </div>
+    </div>
+</div>
+
+<!-- FILTER PANEL -->
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+        <h3 style="margin: 0;">Filtrelenmiş Rapor Görünümü</h3>
+        <form method="get" asp-action="Index" style="margin: 0; width: 300px;">
+            <div class="select-wrapper">
+                <select name="type" class="input" onchange="this.form.submit()">
+                    @foreach (var item in ViewBag.ReportTypes)
+                    {
+                        <option value="@item.Value" selected="@(ViewBag.Type == item.Value)">
+                            @item.Text
+                        </option>
+                    }
+                </select>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- DETAILED INFO -->
+<div class="card" style="min-height: 200px;">
+    @if (ViewBag.Type == "1")
+    {
+        <h3>📈 Genel Servis ve Gelir İstatistiği</h3>
+        <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+        <p style="font-size: 16px;">Sistemde kayıtlı toplam servis adeti: <b>@Model?.TotalService</b></p>
+        <p style="font-size: 16px;">Servislerden elde edilen toplam ciro: <b style="color: var(--green);">@Model?.TotalIncome.ToString("F2") ₺</b></p>
+    }
+    else if (ViewBag.Type == "2")
+    {
+        <h3>🚘 En Çok Servis Hizmeti Alan Araç</h3>
+        <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+        <p style="font-size: 16px;">Marka: <b>@Model?.Brand</b></p>
+        <p style="font-size: 16px;">Plaka: <b style="color: var(--blue);">@Model?.Plate</b></p>
+        <p style="font-size: 16px;">Toplam Servis Girişi: <b>@Model?.ServiceCount Kez</b></p>
+    }
+    else if (ViewBag.Type == "3")
+    {
+        <h3>🧑‍🔧 En Aktif Çalışan Personel</h3>
+        <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+        <p style="font-size: 16px;">Personel Ad Soyad: <b>@Model?.EmployeeName</b></p>
+        <p style="font-size: 16px;">Toplam Tamamladığı İş Sayısı: <b>@Model?.ServiceCount Adet</b></p>
+    }
+    else if (ViewBag.Type == "4")
+    {
+        <h3>💰 Finansal Rapor</h3>
+        <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+        <p style="font-size: 18px;">Net Toplam Gelir: <b style="color: var(--green);">@Model?.TotalIncome.ToString("F2") ₺</b></p>
+    }
+    else if (ViewBag.Type == "5")
+    {
+        <h3>📋 Genel Analitik Rapor (Detaylar)</h3>
+        <hr style="border-color: rgba(255,255,255,0.05); margin: 15px 0;" />
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+                <h4>🛠️ Servis ve Finansal Durum</h4>
+                <p>Toplam Servis Adeti: <b>@service?.TotalService</b></p>
+                <p>Toplam Ciro: <b style="color: var(--green);">@service?.TotalIncome.ToString("F2") ₺</b></p>
+            </div>
+            <div>
+                <h4>🏆 En Çok Öne Çıkanlar</h4>
+                <p>En Çok Servis Alan Araç: <b>@topVehicle?.Brand (@topVehicle?.Plate)</b> - @topVehicle?.ServiceCount kere</p>
+                <p>En Aktif Çalışan Usta: <b>@topEmployee?.EmployeeName</b> - @topEmployee?.ServiceCount kere</p>
+            </div>
+        </div>
+    }
+</div>

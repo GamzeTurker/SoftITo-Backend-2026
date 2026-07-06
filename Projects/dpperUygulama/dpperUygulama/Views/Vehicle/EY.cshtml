@@ -1,0 +1,47 @@
+﻿@model dpperUygulama.Models.Vehicle
+
+<div class="card">
+
+    <h2>🚘 Araç Ekle / Düzenle</h2>
+
+    <form asp-action="EY" method="post">
+
+        <input type="hidden" asp-for="VehicleId" />
+
+        <label>Marka</label>
+        <input asp-for="Brand" class="input" placeholder="Araç markası" />
+
+        <label>Plaka</label>
+        <input asp-for="Plate" class="input" placeholder="Plaka" />
+
+        
+        
+        <!-- MÜŞTERİ DROPDOWN -->
+        <label>Müşteri Seç</label>
+
+        <div class="select-wrapper">
+
+            <select asp-for="CustomerId" class="input">
+
+                <option value="">-- Müşteri Seç --</option>
+
+                @foreach (var item in ViewBag.Customers)
+                {
+                    <option value="@item.CustomerId">
+                        @item.FullName
+                    </option>
+                }
+
+            </select>
+
+        </div>
+
+        <br />
+
+        <button type="submit" class="btn btn-create">💾 Kaydet</button>
+
+        <a asp-action="Index" class="btn btn-gray">← Geri</a>
+
+    </form>
+
+</div>

@@ -1,0 +1,25 @@
+﻿@model dpperUygulama.Models.Employee
+
+<div class="card">
+
+    <h2>🧑‍🔧 Personel Ekle / Düzenle</h2>
+
+    <form asp-action="EY" method="post">
+
+        <input type="hidden" asp-for="EmployeeId" />
+
+        <label>Ad Soyad</label>
+        <input asp-for="EmployeeName" class="input" placeholder="Ad Soyad" />
+
+        <label>Görev</label>
+        <input asp-for="JobTitle" class="input" placeholder="Görev" />
+
+        <br />
+
+        <button type="submit" class="btn btn-create">💾 Kaydet</button>
+
+        <a asp-action="Index" class="btn btn-gray">← Geri</a>
+
+    </form>
+
+</div>

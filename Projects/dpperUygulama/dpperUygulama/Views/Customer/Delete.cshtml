@@ -1,0 +1,22 @@
+@model dpperUygulama.Models.Customer
+
+<div class="card" style="border-top: 4px solid var(--red); max-width: 600px; margin: 0 auto;">
+    <h2>🗑️ Müşteri Silme Onayı</h2>
+    
+    <div class="alert-danger-custom">
+        ⚠️ Bu müşteriyi silmek istediğinize emin misiniz? Bağlı olan araçları ve servis kayıtları da silinebilir!
+    </div>
+
+    <div class="card" style="background: var(--panel-2); margin-top: 15px;">
+        <p style="margin: 8px 0;"><b>Müşteri No:</b> @Model.CustomerId</p>
+        <p style="margin: 8px 0;"><b>Ad Soyad:</b> @Model.FullName</p>
+        <p style="margin: 8px 0;"><b>Telefon:</b> @Model.Phone</p>
+        <p style="margin: 8px 0;"><b>Adres:</b> @Model.Address</p>
+    </div>
+
+    <form asp-action="Delete" method="post" style="margin-top: 20px; display: flex; gap: 10px;">
+        <input type="hidden" asp-for="CustomerId" />
+        <button type="submit" class="btn btn-delete">❌ Silmeyi Onayla</button>
+        <a asp-action="Index" class="btn btn-gray">Vazgeç</a>
+    </form>
+</div>

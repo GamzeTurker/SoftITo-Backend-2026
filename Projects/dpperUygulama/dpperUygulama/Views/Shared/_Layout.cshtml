@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - Servis Yönetim Paneli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+
+    <!-- YATAY GLASSMORPHISM NAVİGASYON -->
+    <nav class="glass-navbar">
+        <a class="brand-logo" href="/Home/Index">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+            <span>AUTO SERVIS</span>
+        </a>
+        
+        <div class="nav-menu-links">
+            <a href="/Home/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Home" ? "active" : "")">
+                <i class="fa-solid fa-house me-1"></i> Panel
+            </a>
+            <a href="/Customer/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Customer" ? "active" : "")">
+                <i class="fa-solid fa-users me-1"></i> Müşteriler
+            </a>
+            <a href="/Vehicle/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Vehicle" ? "active" : "")">
+                <i class="fa-solid fa-car me-1"></i> Araçlar
+            </a>
+            <a href="/Employee/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Employee" ? "active" : "")">
+                <i class="fa-solid fa-user-gear me-1"></i> Personel
+            </a>
+            <a href="/ServiceRecord/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "ServiceRecord" ? "active" : "")">
+                <i class="fa-solid fa-screwdriver-wrench me-1"></i> Servis Kayıtları
+            </a>
+            <a href="/Report/Index" class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Report" ? "active" : "")">
+                <i class="fa-solid fa-chart-simple me-1"></i> Raporlar
+            </a>
+        </div>
+        
+        <div class="user-badge-header">
+            <span class="user-badge-dot"></span>
+            <span>Admin Portal</span>
+        </div>
+    </nav>
+
+    <!-- ANA İÇERİK ALANI -->
+    <main class="main-wrapper-container">
+        @RenderBody()
+    </main>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

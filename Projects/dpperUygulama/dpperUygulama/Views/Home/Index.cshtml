@@ -1,0 +1,72 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<!-- HOŞ GELDİNİZ BAŞLIK -->
+<div class="card" style="margin-bottom: 30px; background: linear-gradient(135deg, rgba(6, 182, 212, 0.1), rgba(139, 92, 246, 0.1)); border-color: rgba(6, 182, 212, 0.2);">
+    <div class="row align-items-center" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+        <div>
+            <h1 style="margin: 0 0 10px 0; font-size: 2.2rem; font-weight: 800; background: linear-gradient(to right, #ffffff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">
+                Servis Yönetim Sistemine Hoş Geldiniz
+            </h1>
+            <p style="margin: 0; color: var(--text-muted); font-size: 1.05rem;">
+                Müşteri kayıtlarını, araç geçmişlerini, personel görevlerini ve servis girdilerini dapper hızıyla anında yönetin.
+            </p>
+        </div>
+        <div>
+            <div class="user-badge-header" style="padding: 12px 24px; font-size: 1.05rem; font-weight: 700; border-color: rgba(6, 182, 212, 0.3); color: var(--primary);">
+                <i class="fa-solid fa-cloud-bolt"></i> Dapper Engine Active
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- DASHBOARD KARTLARI -->
+<div class="cards">
+
+    <div class="card blue">
+        <div style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"><i class="fa-solid fa-users"></i></div>
+        <h3>Müşteriler</h3>
+        <p>Sistemdeki tüm kayıtlı müşterileri listeleyin, yeni müşteri kaydı yapın veya bilgileri güncelleyin.</p>
+        <a href="/Customer/Index" class="btn btn-blue" style="width: 100%; text-align: center; box-sizing: border-box;">
+            <i class="fa-solid fa-list-check me-1"></i> Listeyi Görüntüle
+        </a>
+    </div>
+
+    <div class="card green">
+        <div style="font-size: 2.5rem; color: var(--success); margin-bottom: 15px;"><i class="fa-solid fa-car-side"></i></div>
+        <h3>Araçlar</h3>
+        <p>Müşterilere ait araçların marka, model, plaka ve şasi numarası verilerini tek çatı altında listeleyin.</p>
+        <a href="/Vehicle/Index" class="btn btn-green" style="width: 100%; text-align: center; box-sizing: border-box;">
+            <i class="fa-solid fa-car me-1"></i> Araçları Listele
+        </a>
+    </div>
+
+    <div class="card orange">
+        <div style="font-size: 2.5rem; color: var(--warning); margin-bottom: 15px;"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+        <h3>Servis Kayıtları</h3>
+        <p>Araç kabul işlemlerini yapın, mekanik bakım, arıza tespiti ve yedek parça servis formlarını düzenleyin.</p>
+        <a href="/ServiceRecord/Index" class="btn btn-orange" style="width: 100%; text-align: center; box-sizing: border-box;">
+            <i class="fa-solid fa-wrench me-1"></i> Servisleri Yönet
+        </a>
+    </div>
+
+    <div class="card purple">
+        <div style="font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px;"><i class="fa-solid fa-chart-pie"></i></div>
+        <h3>Analitik Raporlar</h3>
+        <p>Dönemsel servis gelirlerini, en çok işlem gören araç markalarını ve personel verimlilik raporlarını inceleyin.</p>
+        <a href="/Report/Index" class="btn btn-purple" style="width: 100%; text-align: center; box-sizing: border-box;">
+            <i class="fa-solid fa-file-invoice-dollar me-1"></i> Raporları Aç
+        </a>
+    </div>
+
+</div>
+
+<!-- SİSTEM DURUMU -->
+<div class="card" style="background: rgba(255, 255, 255, 0.02);">
+    <h3 style="margin-bottom: 8px;"><i class="fa-solid fa-gauge-high text-primary"></i> Servis Panel Sunucu Durumu</h3>
+    <p style="margin: 0; font-size: 0.9rem;">
+        MSSQL veritabanı bağlantısı Dapper ORM üzerinden optimize edilmiş hızda aktiftir. Tüm veri akışları şifreli yerel tünel üzerinden sağlanmaktadır.
+    </p>
+</div>
