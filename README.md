@@ -17,6 +17,6 @@ This repository showcases the projects I built and documents my continuous growt
 | JavaScript Uygulaması | Interactive web application built with JavaScript and AJAX. | [📁 View Project](./Projects/JavaScriptUygulamasi) |
 | Web API Projesi | RESTful Web API developed with ASP.NET Core. | [📁 View Project](./Projects/WebAPIProjesi) |
 | Dapper Projesi | Database-driven application using Dapper ORM. | [📁 View Project](./Projects/DapperProjesi) |
-| Gelecek Proje | Coming soon... | 🚧 |
+| Kütüphane Yönetim Sistemi | Library management application developed with ASP.NET Core MVC & Web API. | [📁 View Project](./Projects/LibrarySystem) |
 | MVC API Projesi | MVC application consuming a Web API. | [📁 View Project](./Projects/MvcApiProjesi) |
 | Edu Core Projesi | Comprehensive ASP.NET Core MVC application. | [📁 View Project](./Projects/EduCoreProjesi) |
